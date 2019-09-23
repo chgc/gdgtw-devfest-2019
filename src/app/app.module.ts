@@ -6,7 +6,7 @@ import { CfpComponent } from './cfp/cfp.component';
 
 @NgModule({
   declarations: [AppComponent, CfpComponent],
-  imports: [BrowserModule],
+  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' })],
   providers: [],
   bootstrap: [AppComponent]
 })
