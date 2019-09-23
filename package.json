@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run serve:ssr",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,6 +12,9 @@
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run devfest2019:server:production --bundleDependencies all"
+  },
+  "engines": {
+    "node": "10.x.x"
   },
   "private": true,
   "dependencies": {
