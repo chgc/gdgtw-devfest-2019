@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { translatezhTW, translateEn } from './translate.lang';
 
 @Component({
   selector: 'gdg-cfp',
@@ -6,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cfp.component.scss']
 })
 export class CfpComponent implements OnInit {
-  constructor() {}
+  constructor(private translate: TranslateService) {
+    this.setLanguage();
+  }
 
   ngOnInit() {}
+
+  private setLanguage() {
+    this.translate.setTranslation('en', translateEn);
+
+    this.translate.setTranslation('zh-TW', translatezhTW);
+  }
 }

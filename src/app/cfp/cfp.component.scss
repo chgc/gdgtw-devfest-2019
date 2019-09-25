@@ -14,17 +14,19 @@ h2 {
   padding-bottom: 48px;
   margin-right: 4px;
   margin-left: 4px;
+  line-height: 3rem;
 }
 
 @include for-tablet-portrait-up {
   h2 {
     font-size: 3.5rem;
     padding-bottom: 52px;
+    line-height: 4rem;
   }
 }
 
 p {
-  margin: 0 38px;
+  margin: 0 11px;
   text-align: center;
   font-weight: normal;
   font-size: 1rem;
@@ -36,9 +38,10 @@ p {
 
 @include for-tablet-portrait-up {
   p {
+    margin: 0 auto;
     max-width: 1000px;
     font-size: 2rem;
-    line-height: 2.7rem;
+    line-height: 3rem;
   }
 }
 
@@ -84,12 +87,22 @@ p {
   p {
     padding-bottom: 64px;
   }
+}
+
+.event-dates {
+  margin-left: 15px;
+  margin-right: 15px;
+
+  @include for-tablet-portrait-up {
+    margin: 0 auto;
+    max-width: 600px;
+  }
 
   .event {
     .img {
       display: inline-block;
       vertical-align: top;
-      width: 50px;
+      width: 40px;
       padding-top: 2px;
       margin-right: -15px;
     }
@@ -107,23 +120,13 @@ p {
   }
 }
 
-.event-dates {
-  margin-left: 15px;
-  margin-right: 15px;
-
-  @include for-tablet-portrait-up {
-    margin: 0 auto;
-    max-width: 600px;
-  }
-}
-
 .event {
   width: 50%;
   display: inline-block;
   padding-bottom: 32px;
 
   @include for-tablet-portrait-up {
-    width: 250px;
+    width: 300px;
   }
 }
 
@@ -133,7 +136,7 @@ p {
   text-align: left;
   font-family: Noto Sans TC;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.3rem;
 
   @include for-tablet-portrait-up {
     font-size: 2.5rem;
@@ -263,24 +266,24 @@ p {
 .deadline {
   padding-top: 40px;
 
-  .event-dates {
-    width: 60%;
-    margin: 0 auto;
-  }
-
-  .location {
-    font-size: 1.5rem;
-  }
-  .event-date {
-    font-size: 1rem;
-  }
-
-  @include for-tablet-portrait-up {
-    .location {
-      font-size: 2.5rem;
+  .event {
+    .img {
+      display: inline-block;
+      vertical-align: top;
+      width: 40px;
+      padding-top: 2px;
+      margin-right: -15px;
     }
-    .event-date {
-      font-size: 2rem;
+    @include for-tablet-portrait-up {
+      .img {
+        width: 70px;
+        padding-top: 2px;
+        margin-right: -20px;
+      }
+    }
+
+    .info {
+      display: inline-block;
     }
   }
 }
@@ -298,9 +301,9 @@ p {
     justify-content: space-around;
 
     a {
-      width: 119px;
+      width: 140px;
       line-height: 60px;
-      font-size: 2rem;
+      font-size: 1.3rem;
       display: inline-block;
       color: #ffffff;
       background: #174ea6 0% 0% no-repeat padding-box;
@@ -313,7 +316,7 @@ p {
       width: 60%;
       a {
         font: 500 48px Noto Sans TC;
-        width: 220px;
+        width: 300px;
         padding: 0 12px;
         line-height: 130px;
       }

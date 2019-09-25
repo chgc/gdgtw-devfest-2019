@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CfpComponent } from './cfp/cfp.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [AppComponent, CfpComponent],
-  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' })],
+  imports: [
+    TranslateModule.forRoot(),
+    BrowserModule.withServerTransition({ appId: 'serverApp' })
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

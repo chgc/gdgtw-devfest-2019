@@ -9,55 +9,50 @@
   </picture>
 </section>
 <section class="events">
-  <h2>GDG FevFest 開跑了!</h2>
+  <h2>{{ 'events.title' | translate }}</h2>
   <p>
-    全台最大的 Google 相關技術社群開發者盛會，尤其是台北已經是第五屆囉！
-    今年，2019 年，GDG 在台盛開的一年， 本次於北、中、南、東都有舉辦。
+    {{ 'events.description' | translate }}
   </p>
   <div class="event-dates">
     <div class="event taipei">
       <img src="assets/image1.svg" class="img" />
       <div class="info">
-        <span class="location">台北</span>
+        <span class="location"> {{ 'city.taipei' | translate }}</span>
         <time class="event-date">2019-12-01</time>
       </div>
     </div>
     <div class="event hualien">
       <img src="assets/image2.svg" class="img" />
       <div class="info">
-        <span class="location">花蓮</span>
+        <span class="location">{{ 'city.hualien' | translate }}</span>
         <time class="event-date">2019-11-16</time>
       </div>
     </div>
     <div class="event taichung">
       <img src="assets/image3.svg" class="img" />
       <div class="info">
-        <span class="location">台中</span>
+        <span class="location">{{ 'city.taichung' | translate }}</span>
         <time class="event-date">2019-11-09</time>
       </div>
     </div>
     <div class="event kaohsiung">
       <img src="assets/image4.svg" class="img" />
       <div class="info">
-        <span class="location">高雄</span>
+        <span class="location">{{ 'city.kaohsiung' | translate }}</span>
         <time class="event-date">2019-12-08</time>
       </div>
     </div>
   </div>
 </section>
 <section class="current">
-  <h2>我們正在募集講者！</h2>
+  <h2>{{ 'current.title' | translate }}</h2>
   <p>
-    你最近有玩了什麼有趣的東西嗎？你有什麼踩雷甘苦談嗎？
-    不和人分享一下不痛快嗎？那你就是我們要找的人！
+    {{ 'current.description' | translate }}
   </p>
 </section>
 <section class="ideas">
-  <h2>還沒想好講什麼嗎？<br />我們提供你一些想法</h2>
-  <p>
-    以下是我們提供的一些方向，但不限於這些範圍。
-    <br />
-    只要你有任何很酷的東西想分享的，請不吝來這裡與大家分享。
+  <h2 [innerHtml]="'ideas.title' | translate"></h2>
+  <p [innerHtml]="'ideas.description' | translate">
   </p>
   <article class="category mobile">
     <div class="img">
@@ -142,40 +137,52 @@
   </article>
 </section>
 <section class="deadline">
-  <h2>講者募集截止時間</h2>
+  <h2>{{'deadline.title' | translate }}</h2>
   <div class="event-dates">
-    <div class="event">
-      <span class="location">台北</span>
-      <time class="event-date">2019-10-31</time>
+    <div class="event taipei">
+      <img src="assets/image1.svg" class="img" />
+      <div class="info">
+        <span class="location"> {{ 'city.taipei' | translate }}</span>
+        <time class="event-date">2019-10-31</time>
+      </div>
     </div>
-    <div class="event">
-      <span class="location">花蓮</span>
-      <time class="event-date">2019-10-31</time>
+    <div class="event hualien">
+      <img src="assets/image2.svg" class="img" />
+      <div class="info">
+        <span class="location">{{ 'city.hualien' | translate }}</span>
+        <time class="event-date">2019-10-31</time>
+      </div>
     </div>
-    <div class="event">
-      <span class="location">台中</span>
-      <time class="event-date">2019-10-31</time>
+    <div class="event taichung">
+      <img src="assets/image3.svg" class="img" />
+      <div class="info">
+        <span class="location">{{ 'city.taichung' | translate }}</span>
+        <time class="event-date">2019-10-31</time>
+      </div>
     </div>
-    <div class="event">
-      <span class="location">高雄</span>
-      <time class="event-date">2019-10-31</time>
+    <div class="event kaohsiung">
+      <img src="assets/image4.svg" class="img" />
+      <div class="info">
+        <span class="location">{{ 'city.kaohsiung' | translate }}</span>
+        <time class="event-date">2019-10-31</time>
+      </div>
     </div>
   </div>
 </section>
 <section class="cfp">
-  <h2>馬上報名講者！</h2>
+  <h2>{{ 'cfp.title' | translate }}</h2>
   <div class="links">
     <div class="link">
-      <a href="#">台北</a>
+      <a href="#">{{ 'city.taipei' | translate }}</a>
     </div>
     <div class="link">
-      <a href="#">台中</a>
+      <a href="#">{{ 'city.hualien' | translate }}</a>
     </div>
     <div class="link">
-      <a href="#">花蓮</a>
+      <a href="#">{{ 'city.taichung' | translate }}</a>
     </div>
     <div class="link">
-      <a href="#">高雄</a>
+      <a href="#">{{ 'city.kaohsiung' | translate }}</a>
     </div>
   </div>
 </section>
