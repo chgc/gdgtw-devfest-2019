@@ -11,7 +11,16 @@ const TAGS = [
   {
     property: 'og:title',
     content: 'GDG Taiwan DEVFEST 2019 CFP'
-  }
+  },
+  {
+    property: 'og:descriptiont',
+    content: 'GDG Taiwan Devfest 2019 Call For Speaker'
+  },
+  {
+    property: 'og:image',
+    content: 'https://devfest-tw.appspot.com/assets/landing.svg'
+  },
+  { property: 'og:url', content: 'https://devfest-tw.appspot.com' }
 ];
 
 @Component({
