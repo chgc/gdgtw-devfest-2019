@@ -36,9 +36,9 @@ export const translateEn = {
     kaohsiung: 'Kaohsiung'
   },
   events: {
-    title: 'GDG FevFest start!',
+    title: 'GDG DFevFest start!',
     description:
-      'Most biggest Google relative technological, community, and developer event. Especially Taipei has already held the fifth. This year,2019, GDG in Taiwan growth excellently, GDG Taipei, Taichung, Kaohsiung, and Hualien also will hold their own DevFest.'
+      'Most biggest Google relative technological, community, and developer event. Especially Taipei has already held the fifth. This year, 2019, GDG in Taiwan growth excellently, GDG Taipei, Taichung, Kaohsiung, and Hualien also will hold their own DevFest.'
   },
   current: {
     title: 'Now we are calling for speaker',
@@ -47,7 +47,7 @@ export const translateEn = {
   },
   ideas: {
     title: `Not yet prepare the topic ready for speaking <br />We offer you some ideas`,
-    description: `The following are some of the ideas we provide but are not limited to these. <br />As long as you have any cool things want to share, please don't hesitate to share it with everyone.`
+    description: `The following are some of the ideas we provide but are not limited to these.      <br />As long as you have any cool things want to share, please don't hesitate to share it with everyone.`
   },
   deadline: {
     title: 'Deadline'
