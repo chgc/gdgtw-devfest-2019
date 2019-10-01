@@ -10,15 +10,15 @@ const TAGS = [
   },
   {
     property: 'og:title',
-    content: 'GDG Taiwan DEVFEST 2019 CFP'
+    content: 'GDG Taiwan DEVFEST 2019 Call For Spaker'
   },
   {
-    property: 'og:descriptiont',
-    content: 'GDG Taiwan Devfest 2019 Call For Speaker'
+    property: 'og:description',
+    content: '全台最大的 Google 相關技術社群開發者盛會! 歡迎各方高手踴躍投稿。'
   },
   {
     property: 'og:image',
-    content: 'https://devfest-tw.appspot.com/assets/landing.svg'
+    content: 'https://devfest-tw.appspot.com/assets/fb_cfp.png'
   },
   { property: 'og:url', content: 'https://devfest-tw.appspot.com' }
 ];
