@@ -6,16 +6,17 @@ import { Meta } from '@angular/platform-browser';
 const TAGS = [
   {
     name: 'description',
-    content: 'GDG Taiwan Devfest 2019 Call For Speaker'
+    content: 'GDG DevFest Taiwan 2019 Call For Speaker'
   },
   {
     property: 'og:title',
-    content: 'GDG Taiwan DEVFEST 2019 Call For Spaker'
+    content: 'GDG DevFest Taiwan 2019 Call For Speaker'
   },
   {
     property: 'og:description',
     content: '全台最大的 Google 相關技術社群開發者盛會! 歡迎各方高手踴躍投稿。'
   },
+  { property: 'og:type', content: 'website' },
   {
     property: 'og:image',
     content: 'https://devfest-tw.appspot.com/assets/fb_cfp.png'

@@ -7,7 +7,7 @@ export const translatezhTW = {
     kaohsiung: '高雄'
   },
   events: {
-    title: 'GDG FevFest 開跑了!!',
+    title: 'GDG DevFest 開跑了!!',
     description:
       '全台最大的 Google 相關技術社群開發者盛會，尤其是台北已經是第五屆囉！ 今年，2019 年，GDG 在台盛開的一年， 本次於北、中、南、東都有舉辦。'
   },
@@ -36,7 +36,7 @@ export const translateEn = {
     kaohsiung: 'Kaohsiung'
   },
   events: {
-    title: 'GDG DFevFest start!',
+    title: 'GDG DevFest start!',
     description:
       'Most biggest Google relative technological, community, and developer event. Especially Taipei has already held the fifth. This year, 2019, GDG in Taiwan growth excellently, GDG Taipei, Taichung, Kaohsiung, and Hualien also will hold their own DevFest.'
   },
