@@ -5,8 +5,7 @@
   </picture>
   <picture>
     <source media="(min-width: 768px)" srcset="assets/landing.svg" />
-    <img src="assets/landing-mobile.png"
-    srcset="assets/landing-mobile-2x.png 2x" alt="Landing image" class="main" />
+    <img src="assets/landing-mobile.svg" alt="Landing image" class="main" />
   </picture>
 </section>
 <section class="events">
@@ -53,8 +52,7 @@
 </section>
 <section class="ideas">
   <h2 [innerHtml]="'ideas.title' | translate"></h2>
-  <p [innerHtml]="'ideas.description' | translate">
-  </p>
+  <p [innerHtml]="'ideas.description' | translate"></p>
   <article class="category mobile">
     <div class="img">
       <img src="assets/category-mobile.svg" alt="category mobile" />
@@ -138,7 +136,7 @@
   </article>
 </section>
 <section class="deadline">
-  <h2>{{'deadline.title' | translate }}</h2>
+  <h2>{{ 'deadline.title' | translate }}</h2>
   <div class="event-dates">
     <div class="event taipei">
       <img src="assets/image1.svg" class="img" alt="taipei" />
@@ -174,20 +172,32 @@
   <h2>{{ 'cfp.title' | translate }}</h2>
   <div class="links">
     <div class="link">
-      <a href="https://sessionize.com/gdg-devfest-in-taiwan-2019/"
-         target="_blank">{{ 'city.taipei' | translate }}</a>
+      <a
+        href="https://sessionize.com/gdg-devfest-in-taiwan-2019/"
+        target="_blank"
+        >{{ 'city.taipei' | translate }}</a
+      >
     </div>
     <div class="link">
-      <a href="https://sessionize.com/gdg-devfest-in-taiwan-2019/"
-         target="_blank">{{ 'city.hualien' | translate }}</a>
+      <a
+        href="https://sessionize.com/gdg-devfest-in-taiwan-2019/"
+        target="_blank"
+        >{{ 'city.hualien' | translate }}</a
+      >
     </div>
     <div class="link">
-      <a href="https://sessionize.com/gdg-devfest-in-taiwan-2019/"
-         target="_blank">{{ 'city.taichung' | translate }}</a>
+      <a
+        href="https://sessionize.com/gdg-devfest-in-taiwan-2019/"
+        target="_blank"
+        >{{ 'city.taichung' | translate }}</a
+      >
     </div>
     <div class="link">
-      <a href="https://sessionize.com/gdg-devfest-in-taiwan-2019/"
-         target="_blank">{{ 'city.kaohsiung' | translate }}</a>
+      <a
+        href="https://sessionize.com/gdg-devfest-in-taiwan-2019/"
+        target="_blank"
+        >{{ 'city.kaohsiung' | translate }}</a
+      >
     </div>
   </div>
 </section>
@@ -200,10 +210,8 @@
   </a>
   <a href="#">
     <picture>
-      <source media="(min-width: 768px)" srcset="assets/gdg-cloud.png, assets/gdg-cloud-2x.png 2x" />
-      <img src="assets/gdg-cloud-mobile.png" 
-      srcset="assets/gdg-cloud-mobile-2x.png 2x"
-      alt="GDG Cloud" />
+      <source media="(min-width: 768px)" srcset="assets/gdg-cloud.svg" />
+      <img src="assets/gdg-cloud-mobile.svg" alt="GDG Cloud" />
     </picture>
   </a>
   <a href="#">
