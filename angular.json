@@ -26,7 +26,12 @@
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles/"]
             },
-            "assets": ["src/favicon.ico", "src/assets", "src/robots.txt"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/robots.txt",
+              "src/data"
+            ],
             "styles": ["src/styles.scss"],
             "scripts": []
           },

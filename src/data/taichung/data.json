@@ -1,0 +1,168 @@
+{
+  "title": "GDG Taichung",
+  "bannerImage": "./images/banner.jpg",
+  "event": {
+    "date": "2019/11/09",
+    "location": {
+      "name": "東海大學推廣部-省政研究大樓大會議室",
+      "address": "407台中市西屯區台灣大道四段1727號",
+      "googlemap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1819.8459884722574!2d120.61212772758823!3d24.182533087053322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469158a73f58c69%3A0x5c6844f0ec8c2547!2z56eB56uL5p2x5rW35aSn5a245o6o5buj6YOo!5e0!3m2!1szh-TW!2stw!4v1571196341761!5m2!1szh-TW!2stw"
+    },
+    "introduction": "全台最大的 Google 相關技術社群開發者盛會，今年也在台中舉辦了第一屆，今年在其他 3 個城市也分別在 11、12 月份舉辦，有興趣的朋友，也可以參考一下其他城市的 DevFest 盛會",
+    "stats": {
+      "attendence": 200,
+      "days": 1,
+      "senssions": 5,
+      "tracks": 1
+    },
+    "featureSpeakers": [1, 2, 3, 4],
+    "social": [
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/groups/GDG.Taichung/"
+      }
+    ]
+  },
+  "speakers": [
+    {
+      "id": 1,
+      "name": "Ericsk",
+      "country": "Taiwan",
+      "compoany": "Google",
+      "avatar": "",
+      "description": "台灣 GDG 幕後推手",
+      "sessions": [1],
+      "social": [
+        { "type": "facebook", "url": "" },
+        { "type": "twitter", "url": "" },
+        { "type": "github", "url": "" }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "id": 1,
+      "title": "Keynote",
+      "description": "第一屆 DevFest 台中，當然要請到 GDG 在台盛開的幕後推手上官大大來開場",
+      "tags": ["Opening"],
+      "difficulty": "",
+      "language": "中文",
+      "speakers": [1],
+      "trackId": 1,
+      "startTime": "2019-11-09T09:30:00",
+      "endTime": "2019-11-09T09:50:00"
+    },
+    {
+      "id": 2,
+      "title": "",
+      "description": "",
+      "tags": [],
+      "difficulty": "",
+      "language": "中文",
+      "speakers": [],
+      "trackId": 1,
+      "startTime": "2019-11-09T10:00:00",
+      "endTime": "2019-11-09T11:00:00"
+    },
+    {
+      "id": 3,
+      "title": "",
+      "description": "",
+      "tags": [],
+      "difficulty": "",
+      "language": "中文",
+      "speakers": [],
+      "trackId": 1,
+      "startTime": "2019-11-09T11:00:00",
+      "endTime": "2019-11-09T12:00:00"
+    },
+    {
+      "id": 4,
+      "title": "午餐時間",
+      "description": "",
+      "tags": [],
+      "difficulty": "",
+      "language": "中文",
+      "speakers": [],
+      "trackId": 1,
+      "startTime": "2019-11-09T12:00:00",
+      "endTime": "2019-11-09T13:00:00"
+    },
+    {
+      "id": 5,
+      "title": "",
+      "description": "",
+      "tags": [],
+      "difficulty": "",
+      "language": "中文",
+      "speakers": [],
+      "trackId": 1,
+      "startTime": "2019-11-09T13:00:00",
+      "endTime": "2019-11-09T14:00:00"
+    },
+    {
+      "id": 6,
+      "title": "Tea time",
+      "description": "下午茶時間 + 交流 + lighting talk",
+      "tags": ["下午茶", "交流", "Lighting"],
+      "difficulty": "",
+      "language": "中文",
+      "speakers": [],
+      "trackId": 1,
+      "startTime": "2019-11-09T14:00:00",
+      "endTime": "2019-11-09T15:00:00"
+    },
+    {
+      "id": 7,
+      "title": "",
+      "description": "",
+      "tags": [],
+      "difficulty": "",
+      "language": "中文",
+      "speakers": [],
+      "trackId": 1,
+      "startTime": "2019-11-09T15:00:00",
+      "endTime": "2019-11-09T16:00:00"
+    },
+    {
+      "id": 8,
+      "title": "",
+      "description": "",
+      "tags": [],
+      "difficulty": "",
+      "language": "中文",
+      "speakers": [],
+      "trackId": 1,
+      "startTime": "2019-11-09T16:00:00",
+      "endTime": "2019-11-09T16:40:00"
+    },
+    {
+      "id": 9,
+      "title": "Closing",
+      "description": "活動結束、期待下屆",
+      "tags": [],
+      "difficulty": "",
+      "language": "中文",
+      "speakers": [],
+      "trackId": 1,
+      "startTime": "2019-11-09T16:40:00",
+      "endTime": "2019-11-09T17:00:00"
+    }
+  ],
+  "tracks": [{ "id": 1, "location": "省政研究大樓大會議室" }],
+  "sponsors": [{ "name": "", "logo": "", "level": "" }],
+  "teams": [
+    {
+      "id": 1,
+      "name": "Kevin",
+      "title": "",
+      "avatar": "",
+      "team": "",
+      "social": [
+        { "type": "facebook", "url": "" },
+        { "type": "twitter", "url": "" },
+        { "type": "github", "url": "" }
+      ]
+    }
+  ]
+}
