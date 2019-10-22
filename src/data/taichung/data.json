@@ -220,7 +220,7 @@
     }
   ],
   "tracks": [{ "id": 1, "location": "省政研究大樓大會議室" }],
-  "sponsors": [{ "name": "", "logo": "", "level": "" }],
+  "sponsors": [{ "name": "", "logo": "", "level": "", "description": "" }],
   "teams": [
     {
       "id": 1,
