@@ -43,7 +43,7 @@
       "name": "Irene Chang",
       "country": "Taiwan",
       "compoany": "Assistant Mobile Solutions Consultant(Temp)@Google",
-      "avatar": "",
+      "avatar": "images/irene_chang.jpg",
       "description": "目前在 Google 擔任 Assistant Mobile Solutions Consultant (Temp)，致力於推廣 Mobile Web 相關技術，包括 Accelerated Mobile Pages (AMP)、Progressive Web App (PWA)、User Experience (UX) 與 web optimization 等。平面設計出身，4 年網頁設計與開發經驗。咖啡成癮的貓奴，喜歡撞球和小酌。",
       "sessions": [],
       "social": [
@@ -57,7 +57,7 @@
       "name": "Weizhong Yang",
       "country": "Taiwan",
       "compoany": "Developer@KKBOX",
-      "avatar": "",
+      "avatar": "images/weizhong_yang.jpg",
       "description": "從 2005 年開始接觸 Objective C 語言已經 macOS App 開發，從 2008 年開始開發 iOS app，從 2011 年開始在 KKBOX 工作，參與過 KKBOX 的 macOS、iOS、tvOS 與 watchOS 版本開發，以及 KKTIX、Uta Pass 的 iOS 版本，之前也參與過雅虎輸入發以及無蝦皮輸入法 macOS 版本。從 2018 年開始接觸 Flutter。",
       "sessions": [],
       "social": [
@@ -71,7 +71,7 @@
       "name": "Richard Lee",
       "country": "Taiwan",
       "compoany": "愛料理技術長",
-      "avatar": "",
+      "avatar": "images/richard_lee.jpeg",
       "description": "愛料理技術長與共同創辦人，同時為創業人、行銷人及技術人。近期聚焦於將機器學習應用在商業產品中，並且替顧客、合作夥伴創造商業價值。業餘時為 LINE 官方推薦的 API Expert，並為商業技術社群 TGONetworks 的理事，2017 年亦被選為富比世亞洲30位30歲以下傑出青年。可以透過 Facebook / Twitter 聯繫我：Richard Lee / dlackty 或可以撰寫 Email： rl@icook.tw",
       "sessions": [],
       "social": [
@@ -85,7 +85,7 @@
       "name": "魏澤人",
       "country": "Taiwan",
       "compoany": "交通大學智慧科學暨綠能學院副教授",
-      "avatar": "",
+      "avatar": "images/tjw.png",
       "description": "ML GDE、 iiNumbers 首席數學家、花蓮.py 及 GDG 花蓮發起人。",
       "sessions": [],
       "social": [
