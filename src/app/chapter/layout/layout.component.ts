@@ -32,7 +32,7 @@ export class LayoutComponent implements OnInit {
       )
       .subscribe({
         next: (data: any) => {
-          console.log(data);
+          // console.log(data);
           this.data = data;
           this.bannerImage = this.dataService.baseUrl + data.bannerImage;
         }

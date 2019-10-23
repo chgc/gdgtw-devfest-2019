@@ -34,7 +34,7 @@ app.engine(
   'html',
   ngExpressEngine({
     bootstrap: AppServerModule,
-    extraProviders: [
+    providers: [
       {
         provide: 'serverUrl',
         useValue: `http://localhost:${PORT}`

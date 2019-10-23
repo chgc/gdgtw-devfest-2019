@@ -3,6 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { isPlatformBrowser } from '@angular/common';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
 import { EventInfo } from './data.model';
+import { tap } from 'rxjs/operators';
+import { of } from 'rxjs';
+
+const ChapterEvent = makeStateKey('chpater-event');
 
 @Injectable({
   providedIn: 'root'
@@ -17,15 +21,14 @@ export class DataService {
   ) {}
 
   getData(city) {
-    const ChapterEvent = makeStateKey('chpater-event');
-    const store = this.state.get(ChapterEvent, null);
     this.baseUrl = `data/${city}/`;
-    if (store) {
-      return store;
-    }
     const baseUrl = isPlatformBrowser(this.platformId) ? '' : this.serverUrl;
-    const data = this.http.get<EventInfo>(`${baseUrl}/data/${city}/data.json`);
-    this.state.set(ChapterEvent, data);
-    return data;
+    const store = this.state.get<EventInfo>(ChapterEvent, null);
+    if (store) {
+      return of(store);
+    }
+    return this.http
+      .get<EventInfo>(`${baseUrl}/data/${city}/data.json`)
+      .pipe(tap(result => this.state.set(ChapterEvent, result)));
   }
 }
