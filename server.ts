@@ -33,7 +33,13 @@ const { AppServerModule, ngExpressEngine } = require('./dist/server/main');
 app.engine(
   'html',
   ngExpressEngine({
-    bootstrap: AppServerModule
+    bootstrap: AppServerModule,
+    extraProviders: [
+      {
+        provide: 'serverUrl',
+        useValue: `http://localhost:${PORT}`
+      }
+    ]
   })
 );
 
