@@ -16,12 +16,14 @@ import { SponsorComponent } from './chapter/sponsor/sponsor.component';
 import { TeamComponent } from './chapter/team/team.component';
 import { MainComponent } from './main/main.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DataResolver } from './chapter/data-resolver';
 
 const routes: Routes = [
   { path: 'cfp', component: CfpComponent },
   {
     path: ':city',
     component: LayoutComponent,
+    resolve: { data: DataResolver },
     children: [
       { path: '', component: ChapterMainComponent },
       { path: 'agenda', component: AgendaComponent },
@@ -55,7 +57,7 @@ const routes: Routes = [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserTransferStateModule
   ],
-  providers: [],
+  providers: [DataResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

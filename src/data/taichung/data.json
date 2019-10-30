@@ -12,7 +12,7 @@
     "stats": {
       "attendence": 200,
       "days": 1,
-      "senssions": 5,
+      "sessions": 5,
       "tracks": 1
     },
     "featureSpeakers": [1, 2, 3, 4],
@@ -220,7 +220,14 @@
     }
   ],
   "tracks": [{ "id": 1, "location": "省政研究大樓大會議室" }],
-  "sponsors": [{ "name": "", "logo": "", "level": "", "description": "" }],
+  "sponsors": [
+    {
+      "name": "Google",
+      "logo": "http://fakeimg.pl/295x135/ffffff/282828/?text=partner",
+      "level": "合作夥伴",
+      "description": ""
+    }
+  ],
   "teams": [
     {
       "id": 1,
