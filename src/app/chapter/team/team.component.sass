@@ -1,0 +1,119 @@
+$design-mobile-srceen-width: 414px
+$design-pc-screen-width: 1920px
+$fz-regular: 400
+$fz-semibold: 600
+
+@function design-mobile-ratio($pixel)
+  @return percentage($pixel / $design-mobile-srceen-width)
+
+@function design-pc-ratio($pixel)
+  @return percentage($pixel / $design-pc-screen-width)
+
+@mixin mediaquery-pc
+  @media (min-width: 768px)
+    @content
+@mixin mediaquery-pc-1200
+  @media (min-width: 1200px)
+    @content
+
+*
+    // outline: solid 1px
+    box-sizing: border-box
+
+header
+    padding: 152px design-mobile-ratio(36px) 24px
+    background-color: #174EA6
+    overflow: hidden
+    @include mediaquery-pc
+        padding: 200px design-pc-ratio(144px) 112px
+    h2,p
+        margin: 0 auto
+        color: #FFFFFF
+        max-width: 1632px
+    h2
+        font-size: 2.5rem
+        font-weight: $fz-regular
+        margin-bottom: 24px
+        @include mediaquery-pc
+            font-size: 3.5rem
+            margin-bottom: 42px
+    p
+        font-size: 1rem
+        font-weight: $fz-regular
+        @include mediaquery-pc
+            font-size: 1.5rem
+
+main
+    padding: 56px design-mobile-ratio(36px) 69px
+    @include mediaquery-pc
+        padding: 96px design-pc-ratio(144px) 208px
+    .wrapper
+        margin: 0 auto
+        max-width: 1632px
+        section
+            h4
+                font-size: 1.5rem
+                font-weight: $fz-regular
+                line-height: 33px
+                margin-bottom: 22px
+                @include mediaquery-pc
+                    font-size: 2rem
+                    line-height: 43px
+.cards
+    display: flex
+    flex-wrap: wrap
+    .card
+        font-size: 0
+        width: 100%
+        margin-bottom: 59px
+        @include mediaquery-pc
+            width: calc(100%/2)
+        @include mediaquery-pc-1200
+            width: calc(100%/3)
+        figure
+            display: inline-block
+            margin: 0 24px 0 0
+            width: 94px
+            height: 94px
+            border: solid 1px
+            border-radius: 50%
+            @include mediaquery-pc
+                width: 140px
+                height: 140px
+            @include mediaquery-pc-1200
+                margin: 0 44px 0 0
+.content
+    display: inline-block
+    vertical-align: top
+    h3
+        font-size: 1.25rem
+        font-weight: $fz-semibold
+        line-height: 28px
+        margin-bottom: 4px
+        @include mediaquery-pc
+            font-size: 2rem
+            line-height: 43px
+            margin-top: 4px
+            margin-bottom: 3px
+    p
+        font-size: 1rem
+        font-weight: $fz-regular
+        line-height: 22px
+        margin-bottom: 18px
+        @include mediaquery-pc
+            margin-bottom: 34px
+    a
+        display: inline-block
+        margin-right: 13.75px
+        @include mediaquery-pc
+            margin-right: 16px
+    a:nth-last-child(1)
+        margin: 0
+    img
+        width: 20px
+        height: 20px
+        @include mediaquery-pc
+            width: 24px
+            height: 24px
+
+

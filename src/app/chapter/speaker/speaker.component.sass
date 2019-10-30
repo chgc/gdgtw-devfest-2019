@@ -1,0 +1,227 @@
+$design-mobile-srceen-width: 414px
+$design-pc-screen-width: 1920px
+$fz-regular: 400
+$fz-semibold: 600
+
+@function design-mobile-ratio($pixel)
+  @return percentage($pixel / $design-mobile-srceen-width)
+
+@function design-pc-ratio($pixel)
+  @return percentage($pixel / $design-pc-screen-width)
+
+@mixin mediaquery-pc
+  @media all and (min-width: 768px)
+    @content
+
+@mixin mediaquery-pc-1200
+  @media all and (min-width: 1200px)
+    @content
+
+
+*
+    // outline: solid 1px
+    box-sizing: border-box
+
+header
+    padding: 152px design-mobile-ratio(36px) 64px
+    background-color: #174EA6
+    overflow: hidden
+    @include mediaquery-pc
+        padding: 120px design-pc-ratio(144px) 112px
+    h2,p
+        margin: 0 auto
+        color: #FFFFFF
+        max-width: 1632px
+    h2
+        font-size: 2.5rem
+        font-weight: $fz-regular
+        margin-bottom: 24px
+        @include mediaquery-pc
+            font-size: 3.5rem
+            margin-bottom: 42px
+    p
+        font-size: 1rem
+        font-weight: $fz-regular
+        @include mediaquery-pc
+            font-size: 1.5rem
+    span
+        @include mediaquery-pc
+            display: block
+main
+    padding: 74px design-mobile-ratio(39px) 0px
+    @include mediaquery-pc
+        padding: 168px design-pc-ratio(144px) 176px
+    .wrapper
+        display: flex
+        flex-wrap: wrap
+        max-width: 1632px
+        margin: 0 auto
+
+
+.card
+    width: 100%
+    font-size: 0
+    padding-bottom: 80px
+    @include mediaquery-pc
+        width: calc(100%/2)
+    @include mediaquery-pc-1200
+        width: calc(100%/3)
+    figure
+        display: inline-block
+        margin: 0 24px 0 0
+        width: 113px
+        height: 113px
+        // border: solid 1px
+        border-radius: 50%
+        vertical-align: middle
+        background-image: url(/assets/3741d0a27cd1c04cf50a292015777d5f.png)
+        background-position: 50%
+        background-size: 120%
+        @include mediaquery-pc
+            width: 140px
+            height: 140px
+    .content
+        display: inline-block
+        vertical-align: top
+        h3
+            font-size: 1.5rem
+            font-weight: $fz-semibold
+            line-height: 34px
+            margin-bottom: 6px
+        p
+            font-size: 1rem
+            font-weight: $fz-regular
+            line-height: 22px
+            margin-bottom: 26px
+        a
+            display: inline-block
+        img
+            padding: 0 10.62px
+            margin: 0
+            vertical-align: top
+
+// //////////////////// 彈出視窗 ///////////////////////////////////
+
+section.popovers
+    position: fixed
+    overflow: scroll
+    width: 100%
+    height: 100vh
+    background-color: #FFFFFF
+    top: 0
+    left: 0
+    z-index: 1
+    opacity: 0.02
+    @include mediaquery-pc
+        max-width: 1004px
+        max-height: 816px
+        top: 168px
+        left: 50%
+        transform: translateX(-50%)
+
+header.popovers-header
+    background-color: #F2F2F2
+    font-size: initial
+    padding: 24px design-mobile-ratio(24px) 48px
+    @include mediaquery-pc
+        padding: 24px design-pc-ratio(22px) 52px design-pc-ratio(126px)
+    .button-group
+        font-size: 0
+        margin-bottom: 64px
+        button
+            font-size: 0
+            padding: 0
+            background-color: inherit
+            img
+                margin: 0
+        button.arrow
+            @include mediaquery-pc
+                visibility: hidden
+        button.cross
+            visibility: hidden
+            float: right
+            @include mediaquery-pc
+                visibility: visible
+
+    figure
+        margin: 0 28px 0 design-mobile-ratio(12px)
+        width: 88px
+        height: 88px
+    h3
+        display: inline-block
+        font-size: 2rem
+        font-weight: $fz-regular
+        line-height: 43px
+        vertical-align: middle
+        @include mediaquery-pc
+            font-size: 2.5rem
+            line-height: 55px
+
+main.popovers-main
+    background-color: #FFFFFF
+    padding: 0
+    .wrapper
+        padding: 32px design-mobile-ratio(36px) 56px
+        @include mediaquery-pc
+            padding: 49px design-pc-ratio(104px) 32px design-pc-ratio(126px)
+
+.popovers-info
+    width: 100%
+    margin-bottom: 64px
+    @include mediaquery-pc
+        margin-bottom: 72px
+    p
+        font-size: 1rem
+        line-height: 22px
+        margin-bottom: 10px
+        @include mediaquery-pc
+            font-size: 1.5rem
+            line-height: 33px
+            margin-bottom: 18px
+    p:nth-child(2)
+        @include mediaquery-pc
+            margin-bottom: 14px
+    p:nth-child(3)
+        margin-bottom: 26px
+        @include mediaquery-pc
+            margin-bottom: 67px
+    a
+        display: inline-block
+        margin-right: 16px
+    img
+        width: 24px
+        height: 24px
+        margin: 0
+.popovers-schedule
+    width: 100%
+    h3,h4
+        font-size: 1.5rem
+        font-weight: $fz-regular
+        line-height: 33px
+        margin-bottom: 15px
+    h3
+        margin-bottom: 7px
+        @include mediaquery-pc
+            margin-bottom: 15px
+    h4
+        @include mediaquery-pc
+            font-size: 1.875rem
+            line-height: 41px
+
+    p
+        font-size: 1rem
+        font-weight: $fz-regular
+        line-height: 22px
+        margin-bottom: 10px
+    span.popovers-tag
+        display: inline-block
+        color: #78C257
+        border: 1px solid #78C257
+        padding: 3px 6px 2px
+        font-size: 0.875rem
+        line-height: 19px
+
+
+
+
+

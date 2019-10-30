@@ -1,3 +1,63 @@
 <div *ngIf="data">
-  <img [src]="bannerImage">
+  <nav>
+    <div class="navbar">
+      <div class="menu-button">
+        <img src="/assets/menu-24px.svg" alt="menu">
+      </div>
+      <h1 class="logo">
+        <a routerLink="/">
+          <img src="/assets/Group 6.svg" alt="Google Develope Group">
+        </a>
+      </h1>
+      <div>
+        <!------------------- menu-items start-------------------->
+        <section class="menu-items">
+          <div class="menu-items-logo">
+            <img src="/assets/Group 6.svg" alt="Google Develope Group">
+          </div>
+          <ul>
+            <li><a routerLinkActive="home" [routerLink]="['./']">首頁</a></li>
+            <li><a routerLinkActive="home" [routerLink]="['./speaker']">講者</a></li>
+            <li><a routerLinkActive="home" [routerLink]="['./agenda']">議程</a></li>
+            <li><a routerLinkActive="home" [routerLink]="['./team']">團隊</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+  <footer>
+    <div class="wrapper">
+      <button class="topping">
+        <img src="/assets/keyboard_arrow_up-24px.svg" alt="Back to top.">
+      </button>
+      <section class="link-container">
+        <div class="follow">
+          <h4>Follow us</h4>
+          <div class="link">
+            <a href=""><img src="/assets/placeholder2.png" alt=""></a>
+            <a href=""><img src="/assets/placeholder2.png" alt=""></a>
+            <a href=""><img src="/assets/placeholder2.png" alt=""></a>
+            <a href=""><img src="/assets/placeholder2.png" alt=""></a>
+          </div>
+        </div>
+        <div class="share">
+          <h4>分享</h4>
+          <div class="link">
+            <a href=""><img src="/assets/placeholder2.png" alt=""></a>
+            <a href=""><img src="/assets/placeholder2.png" alt=""></a>
+            <a href=""><img src="/assets/placeholder2.png" alt=""></a>
+            <a href=""><img src="/assets/placeholder2.png" alt=""></a>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section class="brand-container">
+        <a class="local-link" href="#GDG_taichung">
+          <img src="/assets/g10.svg" alt="google develope local group">
+        </a>
+        <p class="copyright">&copy;2019 Based on Project Hoverboard ·<br> 社群活動指引</p>
+      </section>
+    </div>
+  </footer>
 </div>

@@ -47,7 +47,10 @@ const routes: Routes = [
   ],
   imports: [
     HttpClientModule,
-    RouterModule.forRoot(routes, { initialNavigation: 'enabled' }),
+    RouterModule.forRoot(routes, {
+      initialNavigation: 'enabled',
+      scrollPositionRestoration: 'enabled'
+    }),
     TranslateModule.forRoot(),
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserTransferStateModule
