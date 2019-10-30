@@ -93,7 +93,7 @@ h3 {
 
 /* ----------------- banner ----------------- */
 .banner-wrapper {
-  height: 730px;
+  // height: 730px;
   padding-bottom: 127px;
   margin-bottom: 72px;
   background-color: #d0d0d0;
@@ -104,8 +104,8 @@ h3 {
   box-sizing: border-box;
 
   @include mediaquery-pc {
-    height: 1080px;
-    padding-bottom: 168px;
+    // height: 1080px;
+    // padding-bottom: 168px;
     margin-bottom: 107px;
   }
 
@@ -120,7 +120,7 @@ h3 {
   .date,
   .place {
     font-size: 0;
-
+    margin-top: -127px;
     img {
       width: 32px;
       height: 32px;
@@ -353,7 +353,7 @@ $speaker-headshot-pc-width: 214px;
     line-height: 22px;
 
     @include mediaquery-pc {
-      font-size: rem(32px);
+      // font-size: rem(32px);
       line-height: 43px;
     }
   }
@@ -369,7 +369,8 @@ $speaker-headshot-pc-width: 214px;
     position: relative;
   }
 
-  & > img {
+  & > img,
+  & > iframe {
     display: none;
 
     @include mediaquery-pc {

@@ -1,11 +1,12 @@
 <main>
   <section class="banner-wrapper">
+    <img [src]="bannerImage" alt="">
     <div class="date">
       <span>{{ detail.date | date: 'MMMM dd' }}</span>
       <img src="/assets/calendar_today-24px.svg" alt="calendar icon">
     </div>
     <div class="place">
-      <span>地點</span>
+      <span>{{ detail.location.name}}</span>
       <img src="/assets/map-24px.svg" alt="map icon">
     </div>
   </section>
@@ -57,7 +58,7 @@
     </div>
   </section>
   <section class="place-wrapper">
-    <img src="/assets/maps.png" alt="map">
+    <iframe [src]="detail.location.googlemap" height="800px"></iframe>
     <div class="description">
       <h3>位置</h3>
       <p>{{ detail.location.name}}</p>
