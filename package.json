@@ -19,10 +19,12 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.0-rc.0",
+    "@angular/cdk": "~8.2.3",
     "@angular/common": "~9.0.0-rc.0",
     "@angular/compiler": "~9.0.0-rc.0",
     "@angular/core": "~9.0.0-rc.0",
     "@angular/forms": "~9.0.0-rc.0",
+    "@angular/material": "^8.2.3",
     "@angular/platform-browser": "~9.0.0-rc.0",
     "@angular/platform-browser-dynamic": "~9.0.0-rc.0",
     "@angular/platform-server": "~9.0.0-rc.0",
@@ -31,6 +33,7 @@
     "@nguniversal/module-map-ngfactory-loader": "9.0.0-next.2",
     "@ngx-translate/core": "^11.0.1",
     "express": "^4.15.2",
+    "hammerjs": "^2.0.8",
     "rxjs": "~6.5.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

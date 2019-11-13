@@ -47,4 +47,8 @@ export class ChapterMainComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  isEmptyObject(obj) {
+    return Object.keys(obj).length === 0;
+  }
 }

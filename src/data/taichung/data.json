@@ -220,14 +220,7 @@
     }
   ],
   "tracks": [{ "id": 1, "location": "省政研究大樓大會議室" }],
-  "sponsors": [
-    {
-      "name": "Google",
-      "logo": "http://fakeimg.pl/295x135/ffffff/282828/?text=partner",
-      "level": "合作夥伴",
-      "description": ""
-    }
-  ],
+  "sponsors": [],
   "teams": [
     {
       "id": 1,

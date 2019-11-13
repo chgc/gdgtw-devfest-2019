@@ -17,6 +17,7 @@ import { TeamComponent } from './chapter/team/team.component';
 import { MainComponent } from './main/main.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataResolver } from './chapter/data-resolver';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   { path: 'cfp', component: CfpComponent },
@@ -55,7 +56,8 @@ const routes: Routes = [
     }),
     TranslateModule.forRoot(),
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    BrowserTransferStateModule
+    BrowserTransferStateModule,
+    BrowserAnimationsModule
   ],
   providers: [DataResolver],
   bootstrap: [AppComponent]

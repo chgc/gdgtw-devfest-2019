@@ -68,7 +68,7 @@
       </div>
     </div>
   </section>
-  <section class="wrapper partner-wrapper">
+  <section class="wrapper partner-wrapper" *ngIf="!isEmptyObject(sponsors)">
     <h3>合作夥伴</h3>
     <section class="partner-list-wrapper" *ngFor="let level of sponsors | keyvalue">
       <h4>{{level.key}}</h4>
@@ -78,9 +78,9 @@
         </div>
       </section>
     </section>
-    <div class="link">
+    <!-- <div class="link">
       <a href="##">成為贊助商</a>
       <img src="/assets/arrow-right.png" alt="">
-    </div>
+    </div> -->
   </section>
 </main>
