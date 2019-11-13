@@ -40,7 +40,7 @@ export interface Speaker {
   id: number;
   name: string;
   country: string;
-  compoany: string;
+  company: string;
   avatar: string;
   description: string;
   sessions: number[];

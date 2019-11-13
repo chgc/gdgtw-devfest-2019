@@ -18,6 +18,8 @@ import { MainComponent } from './main/main.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataResolver } from './chapter/data-resolver';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SpeakerDialogComponent } from './chapter/speaker-dialog/speaker-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 const routes: Routes = [
   { path: 'cfp', component: CfpComponent },
@@ -46,7 +48,8 @@ const routes: Routes = [
     SpeakerComponent,
     SponsorComponent,
     TeamComponent,
-    MainComponent
+    MainComponent,
+    SpeakerDialogComponent
   ],
   imports: [
     HttpClientModule,
@@ -57,7 +60,8 @@ const routes: Routes = [
     TranslateModule.forRoot(),
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserTransferStateModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [DataResolver],
   bootstrap: [AppComponent]

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DomSanitizer } from '@angular/platform-browser';
 import { pluck } from 'rxjs/operators';
 import { EventInfo } from '../data.model';
+import { MatDialog } from '@angular/material/dialog';
+import { SpeakerDialogComponent } from '../speaker-dialog/speaker-dialog.component';
 
 @Component({
   selector: 'gdg-speaker',
@@ -12,7 +13,7 @@ import { EventInfo } from '../data.model';
 export class SpeakerComponent implements OnInit {
   speakers;
 
-  constructor(private route: ActivatedRoute, santizer: DomSanitizer) {
+  constructor(private route: ActivatedRoute, private dialog: MatDialog) {
     const city = this.route.parent.snapshot.paramMap.get('city');
     this.route.parent.data.pipe(pluck<any, EventInfo>('data')).subscribe({
       next: value => {
@@ -22,6 +23,13 @@ export class SpeakerComponent implements OnInit {
         }));
         console.log(this.speakers);
       }
+    });
+  }
+
+  open(speaker) {
+    this.dialog.open(SpeakerDialogComponent, {
+      width: '500px',
+      data: speaker
     });
   }
 

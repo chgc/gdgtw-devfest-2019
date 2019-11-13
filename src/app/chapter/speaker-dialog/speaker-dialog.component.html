@@ -1,0 +1,22 @@
+<section>
+  <header class="popovers-header">
+    <div class="button-group">
+      <button class="cross">
+        <img src="/assets/close-24px.svg" alt="關閉視窗" (click)="close()">
+      </button>
+    </div>
+    <figure>
+      <img [src]="speaker.avatar">
+    </figure>
+    <h3>{{ speaker.name }}</h3>
+  </header>
+  <main class="popovers-main">
+    <div class="wrapper">
+      <section class="popovers-info">
+        <p>{{ speaker.company }},{{ speaker.country }}</p>
+        <p>專業</p>
+        <p>{{ speaker.description }}</p>
+      </section>
+    </div>
+  </main>
+</section>

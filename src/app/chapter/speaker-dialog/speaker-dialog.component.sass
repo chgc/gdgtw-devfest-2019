@@ -1,0 +1,91 @@
+$design-mobile-srceen-width: 414px
+$design-pc-screen-width: 1920px
+$fz-regular: 400
+$fz-semibold: 600
+
+@mixin mediaquery-pc
+  @media all and (min-width: 768px)
+    @content
+
+@mixin mediaquery-pc-1200
+  @media all and (min-width: 1200px)
+    @content
+
+// //////////////////// 彈出視窗 ///////////////////////////////////
+
+header.popovers-header
+    background-color: #F2F2F2
+    font-size: initial
+    padding: 24px design-mobile-ratio(24px) 48px
+    @include mediaquery-pc
+        padding: 24px design-pc-ratio(22px) 52px design-pc-ratio(126px)
+    .button-group
+        font-size: 0
+        margin-bottom: 64px
+        button
+            font-size: 0
+            padding: 0
+            background-color: inherit
+            img
+                margin: 0
+        button.arrow
+            @include mediaquery-pc
+                visibility: hidden
+        button.cross
+            visibility: hidden
+            float: right
+            @include mediaquery-pc
+                visibility: visible
+
+    figure
+        margin: 0 28px 0 design-mobile-ratio(12px)
+        width: 88px
+        height: 88px
+        img
+          width:100%
+    h3
+        display: inline-block
+        font-size: 2rem
+        font-weight: $fz-regular
+        line-height: 43px
+        vertical-align: middle
+        @include mediaquery-pc
+            font-size: 2.5rem
+            line-height: 55px
+
+main.popovers-main
+    background-color: #FFFFFF
+    padding: 0
+    .wrapper
+        padding: 32px design-mobile-ratio(36px) 56px
+        @include mediaquery-pc
+            padding: 49px design-pc-ratio(104px) 32px design-pc-ratio(126px)
+
+.popovers-info
+    width: 100%
+    margin-bottom: 64px
+    @include mediaquery-pc
+        margin-bottom: 72px
+    p
+        font-size: 1rem
+        line-height: 22px
+        margin-bottom: 10px
+        @include mediaquery-pc
+            font-size: 1.5rem
+            line-height: 33px
+            margin-bottom: 18px
+    p:nth-child(2)
+        @include mediaquery-pc
+            margin-bottom: 14px
+    p:nth-child(3)
+        margin-bottom: 26px
+        @include mediaquery-pc
+            margin-bottom: 67px
+    a
+        display: inline-block
+        margin-right: 16px
+    img
+        width: 24px
+        height: 24px
+        margin: 0
+.popovers-schedule
