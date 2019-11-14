@@ -21,7 +21,6 @@ export class SpeakerComponent implements OnInit {
           ...x,
           avatar: `/data/${city}/${x.avatar}`
         }));
-        console.log(this.speakers);
       }
     });
   }
