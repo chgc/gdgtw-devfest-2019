@@ -15,28 +15,28 @@
     <div class="description">
       <p>{{ detail.descText }}</p>
     </div>
-    <!-- <div class="content-list">
+    <div class="content-list">
       <section class="content">
         <div class="content-count">{{ detail.stats.attendence }}</div>
-        <hr>
+        <hr />
         <div class="content-description">參加者</div>
       </section>
       <section class="content">
         <div class="content-count">{{ detail.stats.days }}</div>
-        <hr>
+        <hr />
         <div class="content-description">活動天數</div>
       </section>
       <section class="content">
         <div class="content-count">{{ detail.stats.sessions }}</div>
-        <hr>
+        <hr />
         <div class="content-description">議程數</div>
       </section>
       <section class="content">
         <div class="content-count">{{ detail.stats.tracks }}</div>
-        <hr>
+        <hr />
         <div class="content-description">議程軌</div>
       </section>
-    </div> -->
+    </div>
   </section>
   <section class="wrapper speaker-wrapper">
     <h3>明星講者</h3>
@@ -58,21 +58,22 @@
     </div>
   </section>
   <section class="place-wrapper">
-    <google-map
-      [zoom]="zoom"
-      [center]="center"
-      [options]="options"
-      height="800px"
-      width="100%"
-    >
-      <map-marker [position]="center"> </map-marker
-    ></google-map>
+    <iframe
+      height="800"
+      frameborder="0"
+      scrolling="no"
+      marginheight="0"
+      marginwidth="0"
+      [src]="mapUrl"
+    ></iframe>
     <div class="description">
       <h3>位置</h3>
       <p>{{ detail.location.mapTitle }}</p>
       <div class="address">
         <span>{{ detail.location.mapSubTitle }}</span>
-        <img src="/assets/directions-24px.svg" alt="" />
+        <a [href]="mapLink" target="_blank" rel="noopener">
+          <img src="/assets/directions-24px.svg" alt="" />
+        </a>
       </div>
     </div>
   </section>

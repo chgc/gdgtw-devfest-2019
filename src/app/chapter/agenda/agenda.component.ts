@@ -34,8 +34,8 @@ export class AgendaComponent implements OnInit {
     });
   }
 
-  getSpeaker(speakerIds: number[]) {
-    return this.speakers.filter(x => speakerIds.includes(+x.speaker_id));
+  getSpeaker(speakerId: string) {
+    return this.speakers.filter(x => x.speaker_id === speakerId);
   }
 
   ngOnInit() {}

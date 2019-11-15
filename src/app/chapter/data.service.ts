@@ -41,7 +41,6 @@ export class DataService {
   app;
   remoteConfig: firebase.remoteConfig.RemoteConfig;
   isConnect;
-  private source$;
   private config$ = new BehaviorSubject({});
 
   constructor(
@@ -54,7 +53,7 @@ export class DataService {
     this.remoteConfig = this.app.remoteConfig();
     this.remoteConfig.settings = {
       fetchTimeoutMillis: 3600000,
-      minimumFetchIntervalMillis: 3600000
+      minimumFetchIntervalMillis: 3600
     };
 
     of(this.remoteConfig)
@@ -65,7 +64,8 @@ export class DataService {
             rc.fetchAndActivate().then(() => rc.getAll())
           )
         ),
-        runOutsideAngular(this.zone)
+        runOutsideAngular(this.zone),
+        tap(v => console.log(v))
       )
       .subscribe({
         next: value => this.config$.next(value)
@@ -73,6 +73,9 @@ export class DataService {
   }
 
   getData(city) {
+    // this.baseUrl = `data/${city}/`;
+    // const baseUrl = isPlatformBrowser(this.platformId) ? '' : this.serverUrl;
+
     const ChapterEvent = makeStateKey(`chpater-event-${city}`);
     const store = this.state.get<EventInfo>(ChapterEvent, null);
     if (store) {
@@ -90,5 +93,9 @@ export class DataService {
       }),
       take(1)
     );
+
+    // return this.http
+    // .get<EventInfo>(`${baseUrl}/data/${city}/data.json`)
+    // .pipe(tap(result => this.state.set(ChapterEvent, result)));
   }
 }
