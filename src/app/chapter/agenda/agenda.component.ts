@@ -14,11 +14,13 @@ export class AgendaComponent implements OnInit {
   sessionsByStartTime = {};
   speakers: Speaker[] = [];
   city = '';
+  startDate;
   constructor(private route: ActivatedRoute, private dialog: MatDialog) {
     this.route.parent.data.pipe(pluck<any, EventInfo>('data')).subscribe({
       next: value => {
         this.city = this.route.parent.snapshot.paramMap.get('city');
         this.speakers = value.speakers;
+        this.startDate = value.sessions[0].session_start_time;
         this.sessionsByStartTime = value.sessions.reduce((acc, cur) => {
           const section = acc[cur.session_start_time] || [];
           section.push(cur);

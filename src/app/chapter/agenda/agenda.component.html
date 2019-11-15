@@ -2,7 +2,8 @@
 <header class="main-header">
   <div class="wrapper">
     <h2>議程</h2>
-    <div class="schedule-date"><span class="month">November</span><span class="day">9</span></div>
+    <div class="schedule-date"><span class="month">{{ startDate | date: 'LLLL' }}</span><span
+            class="day">{{ startDate | date: 'dd' }}</span></div>
   </div>
 </header>
 <main>
@@ -12,7 +13,7 @@
             class="minute">{{ section.key | date: 'mm' }}</span>
     </div>
     <div class="lecture-container">
-      <div class="schedule-content arrival-position" *ngFor="let lecture of section.value">
+      <div class="lecture-content lecture-position" *ngFor="let lecture of section.value">
         <div class="lecture-title">
           <h4>{{ lecture.session_title }}</h4>
           <p>{{ lecture.session_desc }}</p>

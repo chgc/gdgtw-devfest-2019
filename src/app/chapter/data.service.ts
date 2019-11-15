@@ -6,8 +6,6 @@ import { EventInfo } from './data.model';
 import { tap } from 'rxjs/operators';
 import { of } from 'rxjs';
 
-const ChapterEvent = makeStateKey('chpater-event');
-
 @Injectable({
   providedIn: 'root'
 })
@@ -23,6 +21,7 @@ export class DataService {
   getData(city) {
     this.baseUrl = `data/${city}/`;
     const baseUrl = isPlatformBrowser(this.platformId) ? '' : this.serverUrl;
+    const ChapterEvent = makeStateKey(`chpater-event-${city}`);
     const store = this.state.get<EventInfo>(ChapterEvent, null);
     if (store) {
       return of(store);
