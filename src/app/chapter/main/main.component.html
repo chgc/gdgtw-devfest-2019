@@ -1,13 +1,13 @@
 <main>
   <section class="banner-wrapper">
-    <img [src]="detail.image" alt="">
+    <img [src]="detail.image" alt="" />
     <div class="date">
       <span>{{ detail.date | date: 'MMMM dd' }}</span>
-      <img src="/assets/calendar_today-24px.svg" alt="calendar icon">
+      <img src="/assets/calendar_today-24px.svg" alt="calendar icon" />
     </div>
     <div class="place">
-      <span>{{ detail.location.name}}</span>
-      <img src="/assets/map-24px.svg" alt="map icon">
+      <span>{{ detail.location.name }}</span>
+      <img src="/assets/map-24px.svg" alt="map icon" />
     </div>
   </section>
   <section class="wrapper introduction-wrapper">
@@ -43,7 +43,7 @@
     <div class="speaker-list">
       <section class="speaker" *ngFor="let speaker of speakers">
         <div class="speaker-headshot">
-          <img [src]="speaker.speaker_image">
+          <img [src]="speaker.speaker_image" />
         </div>
         <h4>{{ speaker.speaker_name }}</h4>
         <!-- <div class="speaker-description">
@@ -54,28 +54,39 @@
     </div>
     <div class="link">
       <a [routerLink]="['./speaker']">觀看所有講者</a>
-      <img src="/assets/arrow-right.png" alt="">
+      <img src="/assets/arrow-right.png" alt="" />
     </div>
   </section>
   <section class="place-wrapper">
-    <iframe [src]="detail.location.googlemap" height="800px"></iframe>
+    <google-map
+      [zoom]="zoom"
+      [center]="center"
+      [options]="options"
+      height="800px"
+      width="100%"
+    >
+      <map-marker [position]="center"> </map-marker
+    ></google-map>
     <div class="description">
       <h3>位置</h3>
-      <p>{{ detail.location.name}}</p>
+      <p>{{ detail.location.mapTitle }}</p>
       <div class="address">
-        <span>{{detail.location.address}}</span>
-        <img src="/assets/directions-24px.svg" alt="">
+        <span>{{ detail.location.mapSubTitle }}</span>
+        <img src="/assets/directions-24px.svg" alt="" />
       </div>
     </div>
   </section>
   <section class="wrapper partner-wrapper" *ngIf="!isEmptyObject(sponsors)">
     <h3>合作夥伴</h3>
-    <section class="partner-list-wrapper" *ngFor="let level of sponsors | keyvalue">
-      <h4>{{level.key}}</h4>
+    <section
+      class="partner-list-wrapper"
+      *ngFor="let level of sponsors | keyvalue"
+    >
+      <h4>{{ level.key }}</h4>
       <section class="partner-list">
         <div class="partner" *ngFor="let sponsor of level.value">
           <a [href]="sponsor.url" target="_blank" rel="noopener">
-            <img [src]="sponsor.image" [alt]="sponsor.name">
+            <img [src]="sponsor.image" [alt]="sponsor.name" />
           </a>
         </div>
       </section>

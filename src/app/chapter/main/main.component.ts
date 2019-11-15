@@ -13,7 +13,17 @@ export class ChapterMainComponent implements OnInit {
   detail;
   speakers;
   sponsors;
-  bannerImage = '';
+  zoom = 15;
+  center: google.maps.LatLngLiteral;
+
+  options: google.maps.MapOptions = {
+    mapTypeId: 'roadmap',
+    zoomControl: true,
+    scrollwheel: false,
+    disableDoubleClickZoom: true,
+    maxZoom: 18,
+    minZoom: 12
+  };
 
   constructor(private route: ActivatedRoute, santizer: DomSanitizer) {
     const city = this.route.parent.snapshot.paramMap.get('city');
@@ -35,10 +45,11 @@ export class ChapterMainComponent implements OnInit {
             )
           }
         };
-        console.log(this.detail);
-        // this.speakers = value.speakers.filter(x =>
-        //   this.detail.featureSpeakers.includes(x.speaker_id)
-        // );
+
+        this.center = {
+          lat: this.detail.location.lat,
+          lng: this.detail.location.lng
+        };
       }
     });
   }

@@ -6,10 +6,10 @@ import {
   PLATFORM_ID
 } from '@angular/core';
 import { makeStateKey, TransferState } from '@angular/platform-browser';
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
 import 'firebase/remote-config';
-import { concat, Observable, of } from 'rxjs';
-import { shareReplay, switchMap, tap, map, filter } from 'rxjs/operators';
+import { concat, Observable, of, BehaviorSubject } from 'rxjs';
+import { shareReplay, switchMap, tap, map, filter, take } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { EventInfo } from './data.model';
 
@@ -41,7 +41,8 @@ export class DataService {
   app;
   remoteConfig: firebase.remoteConfig.RemoteConfig;
   isConnect;
-  source$;
+  private source$;
+  private config$ = new BehaviorSubject({});
 
   constructor(
     private state: TransferState,
@@ -56,16 +57,19 @@ export class DataService {
       minimumFetchIntervalMillis: 3600000
     };
 
-    this.source$ = of(this.remoteConfig).pipe(
-      switchMap(rc =>
-        concat(
-          rc.activate().then(() => rc.getAll()),
-          rc.fetchAndActivate().then(() => rc.getAll())
-        )
-      ),
-      runOutsideAngular(this.zone),
-      shareReplay(1)
-    );
+    of(this.remoteConfig)
+      .pipe(
+        switchMap(rc =>
+          concat(
+            rc.activate().then(() => rc.getAll()),
+            rc.fetchAndActivate().then(() => rc.getAll())
+          )
+        ),
+        runOutsideAngular(this.zone)
+      )
+      .subscribe({
+        next: value => this.config$.next(value)
+      });
   }
 
   getData(city) {
@@ -74,7 +78,7 @@ export class DataService {
     if (store) {
       return of(store);
     }
-    return this.source$.pipe(
+    return this.config$.pipe(
       filter(r => !!r['zh_events'] && !!r[`zh_${city}_one_for_all`]),
       map(r => {
         return {
@@ -84,8 +88,7 @@ export class DataService {
           ...JSON.parse(r[`zh_${city}_one_for_all`].asString())
         };
       }),
-      runOutsideAngular(this.zone),
-      shareReplay(1)
+      take(1)
     );
   }
 }
