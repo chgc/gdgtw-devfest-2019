@@ -421,7 +421,7 @@ main > section {
 
 @media all and (min-width: 768px) {
   .lecture-content {
-    width: calc(97% / 3);
+    width: calc(97% / var(--track-number));
     padding-left: 16px;
     padding-right: 16px;
     margin-bottom: 0;
@@ -430,7 +430,7 @@ main > section {
 
 @media all and (min-width: 1200px) {
   .lecture-content {
-    width: calc(97% / 6);
+    // width: calc(97% / 6);
     padding-left: 16px;
     padding-right: 16px;
     margin-bottom: 0;

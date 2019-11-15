@@ -13,6 +13,7 @@ export class AgendaComponent implements OnInit {
   sessions: Session[] = [];
   sessionsByStartTime = {};
   speakers: Speaker[] = [];
+  tracks = new Set();
   city = '';
   startDate;
   constructor(private route: ActivatedRoute, private dialog: MatDialog) {
@@ -21,11 +22,14 @@ export class AgendaComponent implements OnInit {
         this.city = this.route.parent.snapshot.paramMap.get('city');
         this.speakers = value.speakers;
         this.startDate = value.sessions[0].session_start_time;
-        this.sessionsByStartTime = value.sessions.reduce((acc, cur) => {
-          const section = acc[cur.session_start_time] || [];
-          section.push(cur);
-          return { ...acc, [cur.session_start_time]: section };
-        }, {});
+        this.tracks = new Set(value.sessions.map(x => x.track_id));
+        this.sessionsByStartTime = value.sessions
+          .sort((a, b) => (+a.track_id - +b.track_id > 0 ? 1 : -1))
+          .reduce((acc, cur) => {
+            const section = acc[cur.session_start_time] || [];
+            section.push(cur);
+            return { ...acc, [cur.session_start_time]: section };
+          }, {});
       }
     });
   }

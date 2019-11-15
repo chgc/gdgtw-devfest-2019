@@ -6,7 +6,7 @@
             class="day">{{ startDate | date: 'dd' }}</span></div>
   </div>
 </header>
-<main>
+<main [ngStyle]="{'--track-number':tracks.size}">
   <section *ngFor="let section of sessionsByStartTime | keyvalue">
     <div class="schedule-time">
       <span class="hour">{{ section.key | date: 'HH' }}</span><span
