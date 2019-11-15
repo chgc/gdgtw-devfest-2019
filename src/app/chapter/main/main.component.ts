@@ -21,10 +21,10 @@ export class ChapterMainComponent implements OnInit {
       next: value => {
         this.bannerImage = `/data/${city}/${value.event.bannerImage}`;
         this.sponsors = value.sponsors.reduce((acc, s) => {
-          if (!acc[s.level]) {
-            acc[s.level] = [];
+          if (!acc[s.desc]) {
+            acc[s.desc] = [];
           }
-          acc[s.level].push(s);
+          acc[s.desc].push(s);
           return acc;
         }, {});
 
@@ -37,9 +37,9 @@ export class ChapterMainComponent implements OnInit {
             )
           }
         };
-        this.speakers = value.speakers
-          .filter(x => this.detail.featureSpeakers.includes(x.id))
-          .map(x => ({ ...x, avatar: `/data/${city}/${x.avatar}` }));
+        this.speakers = value.speakers.filter(x =>
+          this.detail.featureSpeakers.includes(x.speaker_id)
+        );
         console.log(this.speakers);
         console.log(this.detail);
       }

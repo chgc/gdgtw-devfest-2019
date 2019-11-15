@@ -6,11 +6,10 @@
   <div class="wrapper">
     <div class="card" *ngFor="let speaker of speakers" (click)="open(speaker)">
       <figure>
-        <img [src]="speaker.avatar">
+        <img [src]="speaker.speaker_image">
       </figure>
       <div class="content">
-        <h3>{{ speaker.name }}</h3>
-        <p>{{ speaker.company }},{{ speaker.country }}</p>
+        <h3>{{ speaker.speaker_name }}</h3>
       </div>
     </div>
   </div>

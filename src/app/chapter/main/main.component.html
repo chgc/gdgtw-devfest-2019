@@ -43,13 +43,13 @@
     <div class="speaker-list">
       <section class="speaker" *ngFor="let speaker of speakers">
         <div class="speaker-headshot">
-          <img [src]="speaker.avatar">
+          <img [src]="speaker.speaker_image">
         </div>
-        <h4>{{ speaker.name }}</h4>
-        <div class="speaker-description">
+        <h4>{{ speaker.speaker_name }}</h4>
+        <!-- <div class="speaker-description">
           <span class="city">{{ speaker.company }}</span>
           <span class="country">{{ speaker.country }}</span>
-        </div>
+        </div> -->
       </section>
     </div>
     <div class="link">
@@ -74,7 +74,9 @@
       <h4>{{level.key}}</h4>
       <section class="partner-list">
         <div class="partner" *ngFor="let sponsor of level.value">
-          <img [src]="sponsor.logo" alt="">
+          <a [href]="sponsor.url" target="_blank" rel="noopener">
+            <img [src]="sponsor.image" [alt]="sponsor.name">
+          </a>
         </div>
       </section>
     </section>

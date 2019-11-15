@@ -14,16 +14,15 @@
     <div class="lecture-container">
       <div class="schedule-content arrival-position" *ngFor="let lecture of section.value">
         <div class="lecture-title">
-          <h4>{{ lecture.title }}</h4>
-          <p>{{ lecture.language }}</p>
+          <h4>{{ lecture.session_title }}</h4>
+          <p>{{ lecture.session_desc }}</p>
         </div>
-        <p class="length">40 min</p>
+        <p class="length">{{ lecture.session_total_time }} min</p>
         <div class="speaker">
-          <div class="speaker-intro" *ngFor="let speaker of getSpeaker(lecture.speakers)">
-            <img [src]="speaker.avatar" alt="Speaker's photo.">
+          <div class="speaker-intro" *ngFor="let speaker of getSpeaker(lecture.speaker_id)">
+            <img [src]="speaker.speaker_image" alt="Speaker's photo.">
             <div>
-              <h4>{{ speaker.name }}</h4>
-              <p><span>{{ speaker.company}}</span>/<span>{{ speaker.country}}</span></p>
+              <h4>{{ speaker.speaker_name }}</h4>
             </div>
           </div>
           <div class="speaker-tech">

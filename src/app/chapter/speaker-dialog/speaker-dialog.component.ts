@@ -13,7 +13,6 @@ export class SpeakerDialogComponent implements OnInit {
     public dialogRef: MatDialogRef<SpeakerDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data
   ) {
-    console.log(data);
     this.speaker = data;
   }
 

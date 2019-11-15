@@ -17,10 +17,7 @@ export class SpeakerComponent implements OnInit {
     const city = this.route.parent.snapshot.paramMap.get('city');
     this.route.parent.data.pipe(pluck<any, EventInfo>('data')).subscribe({
       next: value => {
-        this.speakers = value.speakers.map(x => ({
-          ...x,
-          avatar: `/data/${city}/${x.avatar}`
-        }));
+        this.speakers = value.speakers;
       }
     });
   }

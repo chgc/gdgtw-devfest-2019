@@ -6,16 +6,18 @@
       </button>
     </div>
     <figure>
-      <img [src]="speaker.avatar">
+      <img [src]="speaker.speaker_image">
     </figure>
-    <h3>{{ speaker.name }}</h3>
+    <h3>{{ speaker.speaker_name }}</h3>
   </header>
   <main class="popovers-main">
     <div class="wrapper">
       <section class="popovers-info">
-        <p>{{ speaker.company }},{{ speaker.country }}</p>
-        <p>專業</p>
-        <p>{{ speaker.description }}</p>
+        <p>{{ speaker.speaker_desc }}</p>
+      </section>
+      <section class="popovers-info">
+        <h3>議程</h3>
+        <p>{{ speaker.speaker_session }}</p>
       </section>
     </div>
   </main>

@@ -20,22 +20,16 @@ export class AgendaComponent implements OnInit {
         this.city = this.route.parent.snapshot.paramMap.get('city');
         this.speakers = value.speakers;
         this.sessionsByStartTime = value.sessions.reduce((acc, cur) => {
-          const section = acc[cur.startTime] || [];
+          const section = acc[cur.session_start_time] || [];
           section.push(cur);
-          return { ...acc, [cur.startTime]: section };
+          return { ...acc, [cur.session_start_time]: section };
         }, {});
-        console.log(this.sessionsByStartTime);
       }
     });
   }
 
   getSpeaker(speakerIds: number[]) {
-    return this.speakers
-      .filter(x => speakerIds.includes(x.id))
-      .map(x => ({
-        ...x,
-        avatar: `/data/${this.city}/${x.avatar}`
-      }));
+    return this.speakers.filter(x => speakerIds.includes(+x.speaker_id));
   }
 
   ngOnInit() {}

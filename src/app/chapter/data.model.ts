@@ -37,46 +37,57 @@ export interface BasicInfo {
 }
 
 export interface Speaker {
-  id: number;
-  name: string;
-  country: string;
-  company: string;
-  avatar: string;
-  description: string;
-  sessions: number[];
-  social: Social[];
+  speaker_id: string;
+  speaker_image: string;
+  speaker_name: string;
+  speaker_desc: string;
+  speaker_session: string;
+  fb_url?: any;
+  github_url?: any;
+  linkedin_url?: any;
+  twitter_url?: any;
+}
+
+export interface Link {
+  presentation: string;
+  video: string;
+  hackmd: string;
 }
 
 export interface Session {
-  id: number;
-  title: string;
-  description: string;
-  tags: string[];
-  difficulty: string;
-  language: string;
-  speakers: number[];
-  trackId: number;
-  startTime: string;
-  endTime: string;
+  session_id: string;
+  session_start_time: string;
+  session_total_time: string;
+  session_title: string;
+  session_desc: string;
+  speaker_id: string;
+  track_id: string;
+  tags: any[];
+  links: Link;
 }
 
 export interface Track {
   id: number;
-  location: string;
+  title: string;
 }
 
 export interface Sponsor {
   name: string;
+  image: string;
+  desc: string;
+  url: string;
   logo: string;
-  level: string;
-  description: string;
 }
 
 export interface Team {
-  id: number;
   name: string;
-  title: string;
-  avatar: string;
-  team: string;
-  social: Social[];
+  desc: string;
+  contribution: string;
+  image: string;
+  job: string;
+  speciality: string;
+  fb_url: string;
+  twitter_url: string;
+  linkedin_url: string;
+  github_url: string;
 }
