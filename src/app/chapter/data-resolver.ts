@@ -7,6 +7,7 @@ import { EventInfo } from './data.model';
 export class DataResolver implements Resolve<EventInfo> {
   constructor(private dataService: DataService) {}
   resolve(route: ActivatedRouteSnapshot) {
+    console.log('a');
     return this.dataService.getData(route.paramMap.get('city'));
   }
 }

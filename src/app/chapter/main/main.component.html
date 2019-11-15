@@ -1,6 +1,6 @@
 <main>
   <section class="banner-wrapper">
-    <img [src]="bannerImage" alt="">
+    <img [src]="detail.image" alt="">
     <div class="date">
       <span>{{ detail.date | date: 'MMMM dd' }}</span>
       <img src="/assets/calendar_today-24px.svg" alt="calendar icon">
@@ -13,9 +13,9 @@
   <section class="wrapper introduction-wrapper">
     <h3>簡介</h3>
     <div class="description">
-      <p>{{ detail.introduction }}</p>
+      <p>{{ detail.descText }}</p>
     </div>
-    <div class="content-list">
+    <!-- <div class="content-list">
       <section class="content">
         <div class="content-count">{{ detail.stats.attendence }}</div>
         <hr>
@@ -36,7 +36,7 @@
         <hr>
         <div class="content-description">議程軌</div>
       </section>
-    </div>
+    </div> -->
   </section>
   <section class="wrapper speaker-wrapper">
     <h3>明星講者</h3>

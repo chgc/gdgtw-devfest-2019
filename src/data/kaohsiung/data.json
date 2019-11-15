@@ -10,18 +10,18 @@
     },
     "introduction": "活動分成三大主題區：雙軌議程、Code Lab 實作工作坊 (無程式基礎也 OK)、孩童程式體驗營 (跑 conf 咖從小養成，父母也能安心投入議程海)。",
     "stats": {
-      "attendence": 200,
+      "attendence": 700,
       "days": 1,
-      "sessions": 5,
-      "tracks": 1
+      "sessions": 15,
+      "tracks": 3
     },
     "featureSpeakers": ["1", "2", "3", "4"],
-    "social": [
-      {
-        "type": "facebook",
-        "url": "https://www.facebook.com/groups/GDG.Taichung/"
-      }
-    ]
+    "social": {
+      "facebook": "https://www.facebook.com/groups/GDGKaohsiung/",
+      "telegram": "https://t.me/joinchat/GRrt1BQrYVDNXJrwCDTBSA",
+      "meetup": "https://www.meetup.com/GDGKaohsiung/",
+      "registration": "https://pse.is/MJ9SW"
+    }
   },
   "tracks": [
     {

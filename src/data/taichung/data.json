@@ -1,7 +1,7 @@
 {
   "event": {
     "title": "GDG Taichung",
-    "bannerImage": "./images/banner.jpg",
+    "bannerImage": "https://firebasestorage.googleapis.com/v0/b/angular-sort-url.appspot.com/o/speaker-taichung%2Fbanner.jpg?alt=media&token=043af559-3657-45d0-b8c0-4e661f418cb5",
     "date": "2019/11/09",
     "location": {
       "name": "東海大學推廣部-省政研究大樓大會議室",

@@ -19,7 +19,6 @@ export class ChapterMainComponent implements OnInit {
     const city = this.route.parent.snapshot.paramMap.get('city');
     this.route.parent.data.pipe(pluck<any, EventInfo>('data')).subscribe({
       next: value => {
-        this.bannerImage = `/data/${city}/${value.event.bannerImage}`;
         this.sponsors = value.sponsors.reduce((acc, s) => {
           if (!acc[s.desc]) {
             acc[s.desc] = [];
@@ -27,7 +26,6 @@ export class ChapterMainComponent implements OnInit {
           acc[s.desc].push(s);
           return acc;
         }, {});
-
         this.detail = {
           ...value.event,
           location: {
@@ -37,11 +35,10 @@ export class ChapterMainComponent implements OnInit {
             )
           }
         };
-        this.speakers = value.speakers.filter(x =>
-          this.detail.featureSpeakers.includes(x.speaker_id)
-        );
-        console.log(this.speakers);
         console.log(this.detail);
+        // this.speakers = value.speakers.filter(x =>
+        //   this.detail.featureSpeakers.includes(x.speaker_id)
+        // );
       }
     });
   }

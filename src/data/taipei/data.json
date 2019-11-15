@@ -1,0 +1,33 @@
+{
+  "event": {
+    "title": "DevFest 台北",
+    "bannerImage": "https://jamaicandevelopers.com/p/devfest-2019/@@images/image",
+    "date": "2019/12/01",
+    "location": {
+      "name": "台北科技大學",
+      "address": "106台北市大安區忠孝東路三段1號",
+      "googlemap": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.038196331883!2d121.5354974!3d25.0422329!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x47ea748e8f3f53aa!2z5ZyL56uL6Ie65YyX56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1573800507240!5m2!1szh-TW!2stw"
+    },
+    "introduction": "DevFests are community-led, developer events hosted by GDG chapters around the globe focused on community building & learning about Google’s technologies. Each DevFest is inspired by and uniquely tailored to the needs of the developer community and region that hosts it.",
+    "stats": {
+      "attendence": 200,
+      "days": 1,
+      "sessions": 5,
+      "tracks": 1
+    },
+    "featureSpeakers": ["1", "2", "3", "4"],
+    "social": {
+      "facebook": "https://facebook.com/imthepk",
+      "twitter": "https://twitter.com/imthepk",
+      "linkedinIn": "https://linkedin.com/in/imthepk",
+      "youtube": "https://youtube.com/mtechviral",
+      "meetup": "https://meetup.com/",
+      "emailUrl": "''mailto:mtechviral@gmail.com?subject=Support Needed For DevFest App&body={Name: Pawan Kumar},Email: pawan221b@gmail.com}''"
+    }
+  },
+  "tracks": [],
+  "sessions": [],
+  "speakers": [],
+  "sponsors": [],
+  "teams": []
+}
