@@ -100,7 +100,7 @@ h3 {
 /* ----------------- banner ----------------- */
 .banner-wrapper {
   // height: 730px;
-  padding-bottom: 127px;
+  // padding-bottom: 127px;
   margin-bottom: 72px;
   background-color: #d0d0d0;
   text-align: center;
@@ -111,6 +111,7 @@ h3 {
 
   img {
     width: 100%;
+    padding-top: 90px;
   }
 
   @include mediaquery-pc {
