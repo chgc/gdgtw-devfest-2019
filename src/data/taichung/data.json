@@ -1,14 +1,23 @@
 {
   "event": {
-    "title": "GDG Taichung",
-    "bannerImage": "https://firebasestorage.googleapis.com/v0/b/angular-sort-url.appspot.com/o/speaker-taichung%2Fbanner.jpg?alt=media&token=043af559-3657-45d0-b8c0-4e661f418cb5",
-    "date": "2019/11/09",
+    "tag": "taichung",
+    "isActive": true,
+    "hasLocalization": true,
+    "name": "DevFest 台中",
+    "host": "GDG 台中",
+    "date": "2019-11-9",
+    "useImageAsset": true,
+    "image": "https://jamaicandevelopers.com/p/devfest-2019/@@images/image",
+    "imageAsset": "assets/images/banner_devFest_taichung.webp",
+    "welcomeText": "GDG DevFest Taichung 2019",
+    "descText": "GDG Taichung (Google Developer Group Taichung) 是以研究 Google 相關技術為主的開發者社群，於每週四晚上聚會，由與會者提供數個 Lightening Talk，並不定期邀請講者分享特定主題、舉辦 Hackthon 或 Workshop 等活動。聚會地點在大台中地區，地點將隨著每次活動發佈。",
     "location": {
-      "name": "東海大學推廣部-省政研究大樓大會議室",
-      "address": "407台中市西屯區台灣大道四段1727號",
-      "googlemap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1819.8459884722574!2d120.61212772758823!3d24.182533087053322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469158a73f58c69%3A0x5c6844f0ec8c2547!2z56eB56uL5p2x5rW35aSn5a245o6o5buj6YOo!5e0!3m2!1szh-TW!2stw!4v1571196341761!5m2!1szh-TW!2stw"
+      "name": "東海大學",
+      "mapTitle": "東海大學推廣部",
+      "mapSubTitle": "407台中市西屯區台灣大道四段1727號",
+      "lat": 24.1824046,
+      "lng": 120.6104689
     },
-    "introduction": "GDG Taichung (Google Developer Group Taichung) 是以研究 Google 相關技術為主的開發者社群，於每週四晚上聚會，由與會者提供數個 Lightening Talk，並不定期邀請講者分享特定主題、舉辦 Hackthon 或 Workshop 等活動。聚會地點在大台中地區，地點將隨著每次活動發佈。",
     "stats": {
       "attendence": 200,
       "days": 1,
@@ -16,12 +25,16 @@
       "tracks": 1
     },
     "featureSpeakers": ["1", "2", "3", "4"],
-    "social": [
-      {
-        "type": "facebook",
-        "url": "https://www.facebook.com/groups/GDG.Taichung/"
-      }
-    ]
+    "links": {
+      "facebook": "https://www.facebook.com/GDG.Taichung",
+      "twitter": "",
+      "linkedinIn": "",
+      "youtube": "",
+      "meetup": "https://www.meetup.com/GDGTaichung",
+      "emailUrl": "",
+      "telegram": "https://t.me/gdg_taichung",
+      "registration": "https://gdgtaichung.kktix.cc/events/devfest-2019-taichung"
+    }
   },
   "speakers": [
     {

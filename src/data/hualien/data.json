@@ -1,22 +1,31 @@
 {
   "event": {
-    "title": "DevFest 花蓮",
-    "bannerImage": "https://t.kfs.io/upload_images/104306/landing_large.png",
-    "date": "2019/11/16",
+    "tag": "hualien",
+    "isActive": true,
+    "hasLocalization": false,
+    "name": "DevFest 花蓮",
+    "host": "GDG 花蓮",
+    "date": "2019-11-16",
+    "useImageAsset": true,
+    "image": "https://t.kfs.io/upload_images/104306/landing_large.png",
+    "imageAsset": "assets/images/banner_devfest_hualien.webp",
+    "welcomeText": "Welcome to GDG DevFest",
+    "descText": "GDG 花蓮是 2019 年初成立的 Google 技術開發者社群，舉行各類聚會，包含演講、自由交流、 workshop, study jam, 及年會 Devfest。由於創立成員與花蓮 Python 社群重疊度很高，議題較偏向開源技術，如  Tensorflow, Keras, Kotlin, Docker, Android, 以及 Python 和 Raspberry Pi 上 Google 的 API，讓不同專業以及不同背景的高手，能互相交流、擦出火花。在初學者方面，我們也利用建置雲端環境的方式，自然而然的介紹 linux 命令列、 git、 ssh 等開源技術常見的工具和觀念。 ",
     "location": {
-      "name": "花蓮藍天麗池飯店 (AZURE HOTEL) 2樓",
-      "address": "970 花蓮縣花蓮市中正路590號",
-      "googlemap": "https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d3!2d121.6100866507864!3d23.97903536553697!2m2!1f130.83957!2f90!3m2!1i1024!2i768!4f75!3m3!1m2!1s0x34689fc16ec7e107%3A0x84b2303b7507c07b!2zOTcw6Iqx6JOu57ij6Iqx6JOu5biC5Lit5q2j6LevNTkw6Jmf!5e0!3m2!1szh-TW!2stw!4v1573800312566!5m2!1szh-TW!2stw"
+      "name": "花蓮藍天麗池飯店",
+      "mapTitle": "花蓮藍天麗池飯店 (AZURE HOTEL) 2樓",
+      "mapSubTitle": "970 花蓮縣花蓮市中正路590號",
+      "lat": 23.979008,
+      "lng": 121.610195
     },
-    "introduction": "GDG 花蓮是 2019 年初成立的 Google 技術開發者社群，舉行各類聚會，包含演講、自由交流、 workshop, study jam, 及年會 Devfest。由於創立成員與花蓮 Python 社群重疊度很高，議題較偏向開源技術，如  Tensorflow, Keras, Kotlin, Docker, Android, 以及 Python 和 Raspberry Pi 上 Google 的 API，讓不同專業以及不同背景的高手，能互相交流、擦出火花。在初學者方面，我們也利用建置雲端環境的方式，自然而然的介紹 linux 命令列、 git、 ssh 等開源技術常見的工具和觀念。",
     "stats": {
-      "attendence": 100,
+      "attendence": 200,
       "days": 1,
-      "sessions": 7,
+      "sessions": 5,
       "tracks": 1
     },
     "featureSpeakers": ["1", "2", "3", "4"],
-    "social": {
+    "links": {
       "facebook": "https://www.facebook.com/GDGHualien",
       "twitter": "",
       "linkedinIn": "",

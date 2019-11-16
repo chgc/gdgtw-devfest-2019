@@ -38,7 +38,7 @@ export class ChapterMainComponent implements OnInit {
             )
           }
         };
-        console.log(this.detail);
+        // console.log(this.detail);
         this.center = {
           lat: this.detail.location.lat,
           lng: this.detail.location.lng
@@ -49,11 +49,11 @@ export class ChapterMainComponent implements OnInit {
         );
 
         this.mapUrl = santizer.bypassSecurityTrustResourceUrl(
-          `http://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=${this.center.lat},${this.center.lng}&z=16&output=embed`
+          `https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=${this.center.lat},${this.center.lng}&z=16&output=embed`
         );
 
         this.mapLink = santizer.bypassSecurityTrustResourceUrl(
-          `http://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=${this.center.lat},${this.center.lng}&z=16`
+          `https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=${this.center.lat},${this.center.lng}&z=16`
         );
       }
     });

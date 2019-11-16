@@ -1,27 +1,36 @@
 {
   "event": {
-    "title": "DevFest Kaohsiung",
-    "bannerImage": "https://lh3.googleusercontent.com/dOTFKdW1U6OqDG9DRlNT6PhQdCozArYOZXymt1EEPbF6a9tqBPqKEJjrew55HbeF3No6i0VO3yyrmHUhvCZacwSIynwXT2CvJLX8gs23ZrtcS1DZjUVfC4GM39e3qIwsbHDfuYLRM2kmQjl8coDaLjT0EBj7G4hbOCjq9x1hHT9GM5sbP7JZYY_F0TKaLphlVH5Zwh-6nMSKQR1EE90tAVjHqjo8qXvrjTblIKjT-aVNKPjHEbpBUhLusi5wCloCCvjsbbzTVcvw57gnr2p9FT_C9kx6-Hw8_9jzGq_HXThBW7yvLdFKLWFy4Od-Mt2r3ntruuvNf59j9iSmaVOnW4BzB-D7AdlBVPEsBeweOKswsDbcwWu3kSYtGh71fmyG7RGeopb3MH5JgCBHh1Rqqglo44Mwh8SRS0nH6OdciPJu17NjxSmHNkQoEGuw-1IDzDGLU-ZbmD8V5XiBweUIZ1RGw_EJf3zjOkcGoajwWmDvQGhVSeT9IH05fr5BIkFGf16_iSNqO36pJVnJ9_4ilJwoGKuDY4C2LjIosagYrteLooouHfStRnDm4lopDey2LosIztkl_wFotoc3Or85J-Xlh9VERULQUltxvMsWCem8ZjmNoFrZvZy9yqmtu7TITwz_ATS0UlecaaY7kev5brQi_v2YhOsoUnnxo2YC5zaUYRPUJCCUepTy=w921-h481-no?.jpg",
-    "date": "2019/12/07",
+    "tag": "kaohsiung",
+    "isActive": true,
+    "hasLocalization": true,
+    "name": "DevFest 高雄",
+    "host": "GDG 高雄",
+    "date": "2019-12-07",
+    "useImageAsset": false,
+    "image": "https://lh3.googleusercontent.com/dOTFKdW1U6OqDG9DRlNT6PhQdCozArYOZXymt1EEPbF6a9tqBPqKEJjrew55HbeF3No6i0VO3yyrmHUhvCZacwSIynwXT2CvJLX8gs23ZrtcS1DZjUVfC4GM39e3qIwsbHDfuYLRM2kmQjl8coDaLjT0EBj7G4hbOCjq9x1hHT9GM5sbP7JZYY_F0TKaLphlVH5Zwh-6nMSKQR1EE90tAVjHqjo8qXvrjTblIKjT-aVNKPjHEbpBUhLusi5wCloCCvjsbbzTVcvw57gnr2p9FT_C9kx6-Hw8_9jzGq_HXThBW7yvLdFKLWFy4Od-Mt2r3ntruuvNf59j9iSmaVOnW4BzB-D7AdlBVPEsBeweOKswsDbcwWu3kSYtGh71fmyG7RGeopb3MH5JgCBHh1Rqqglo44Mwh8SRS0nH6OdciPJu17NjxSmHNkQoEGuw-1IDzDGLU-ZbmD8V5XiBweUIZ1RGw_EJf3zjOkcGoajwWmDvQGhVSeT9IH05fr5BIkFGf16_iSNqO36pJVnJ9_4ilJwoGKuDY4C2LjIosagYrteLooouHfStRnDm4lopDey2LosIztkl_wFotoc3Or85J-Xlh9VERULQUltxvMsWCem8ZjmNoFrZvZy9yqmtu7TITwz_ATS0UlecaaY7kev5brQi_v2YhOsoUnnxo2YC5zaUYRPUJCCUepTy=w921-h481-no?.jpg",
+    "imageAsset": "",
+    "welcomeText": "DevFest Kaohsiung",
+    "descText": "活動分成三大主題區：雙軌議程、Code Lab 實作工作坊 (無程式基礎也 OK)、孩童程式體驗營 (跑 conf 咖從小養成，父母也能安心投入議程海)。",
     "location": {
-      "name": "數位創意內容中心",
-      "address": "80341高雄市鹽埕區七賢三路123號3樓",
-      "googlemap": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14730.999229177125!2d120.28177!3d22.6258162!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7f6642f4b4de6ca4!2z6auY6ZuE5biC5pW45L2N5YWn5a655Ym15oSP5Lit5b-DIERBS1VP!5e0!3m2!1szh-TW!2stw!4v1573787934263!5m2!1szh-TW!2stw"
+      "name": "DAKUO",
+      "mapTitle": "數位創意內容中心",
+      "mapSubTitle": "",
+      "lat": 22.625888,
+      "lng": 120.2810908
     },
-    "introduction": "活動分成三大主題區：雙軌議程、Code Lab 實作工作坊 (無程式基礎也 OK)、孩童程式體驗營 (跑 conf 咖從小養成，父母也能安心投入議程海)。",
+    "links": {
+      "facebook": "https://www.facebook.com/groups/GDGKaohsiung/",
+      "telegram": "https://t.me/joinchat/GRrt1BQrYVDNXJrwCDTBSA",
+      "meetup": "https://www.meetup.com/GDGKaohsiung/",
+      "registration": "https://pse.is/MJ9SW"
+    },
     "stats": {
       "attendence": 700,
       "days": 1,
       "sessions": 15,
       "tracks": 3
     },
-    "featureSpeakers": ["1", "2", "3", "4"],
-    "social": {
-      "facebook": "https://www.facebook.com/groups/GDGKaohsiung/",
-      "telegram": "https://t.me/joinchat/GRrt1BQrYVDNXJrwCDTBSA",
-      "meetup": "https://www.meetup.com/GDGKaohsiung/",
-      "registration": "https://pse.is/MJ9SW"
-    }
+    "featureSpeakers": ["13", "1", "2", "8"]
   },
   "tracks": [
     {
