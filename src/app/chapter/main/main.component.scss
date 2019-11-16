@@ -61,7 +61,8 @@ h3 {
   padding: 0 design-mobile-ratio(36px);
 
   $design-pc-wrapper-padding-left: 144px;
-  $design-pc-wrapper-width: $design-pc-screen-width - $design-pc-wrapper-padding-left * 2;
+  $design-pc-wrapper-width: $design-pc-screen-width -
+    $design-pc-wrapper-padding-left * 2;
 
   @include mediaquery-pc {
     width: design-pc-ratio($design-pc-wrapper-width);
@@ -108,16 +109,19 @@ h3 {
   flex-direction: column;
   justify-content: flex-end;
   box-sizing: border-box;
+  padding-top: 45px;
 
   img {
     width: 100%;
-    padding-top: 90px;
   }
 
   @include mediaquery-pc {
     // height: 1080px;
     // padding-bottom: 168px;
     margin-bottom: 107px;
+    img {
+      padding-top: 90px;
+    }
   }
 
   .date {
@@ -283,7 +287,11 @@ $speaker-headshot-pc-width: 214px;
 
     $speaker-wrapper-pc-padding: 144px;
     $speaker-list-pc-padding: 140px;
-    $speaker-half-space: ($design-pc-screen-width - ($speaker-wrapper-pc-padding + $speaker-list-pc-padding) * 2 - $speaker-headshot-pc-width * 4) / 3 / 2;
+    $speaker-half-space: (
+        $design-pc-screen-width -
+          ($speaker-wrapper-pc-padding + $speaker-list-pc-padding) * 2 -
+          $speaker-headshot-pc-width * 4
+      ) / 3 / 2;
     $speaker-list-pc-margin: $speaker-list-pc-padding - $speaker-half-space;
 
     @include mediaquery-pc {
@@ -299,7 +307,8 @@ $speaker-headshot-pc-width: 214px;
     display: none;
 
     @include mediaquery-pc {
-      background: url(/assets/keyboard_arrow_up-24px.svg) no-repeat 50%/44px 44px,
+      background: url(/assets/keyboard_arrow_up-24px.svg) no-repeat 50%/44px
+          44px,
         #fff;
       display: block;
       position: absolute;
@@ -391,8 +400,8 @@ $speaker-headshot-pc-width: 214px;
     position: relative;
   }
 
-  &>img,
-  &>iframe {
+  & > img,
+  & > iframe {
     display: none;
 
     @include mediaquery-pc {

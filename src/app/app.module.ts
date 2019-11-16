@@ -20,6 +20,7 @@ import { DataResolver } from './chapter/data-resolver';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SpeakerDialogComponent } from './chapter/speaker-dialog/speaker-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { PlatformModule } from '@angular/cdk/platform';
 
 const routes: Routes = [
   { path: 'cfp', component: CfpComponent },
@@ -61,6 +62,7 @@ const routes: Routes = [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserTransferStateModule,
     BrowserAnimationsModule,
+    PlatformModule,
     MatDialogModule
   ],
   providers: [DataResolver],
