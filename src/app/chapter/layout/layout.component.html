@@ -2,7 +2,9 @@
   <nav>
     <div class="navbar">
       <div class="menu-button">
-        <img src="/assets/menu-24px.svg" alt="menu" />
+        <label for="menu-control">
+          <img src="/assets/menu-24px.svg" alt="menu" />
+        </label>
       </div>
       <h1 class="logo">
         <a routerLink="/">
@@ -11,6 +13,8 @@
       </h1>
       <div>
         <!------------------- menu-items start-------------------->
+        <input type="checkbox" name="" id="menu-control" #menuControl />
+        <label class="hide-menu" for="menu-control"></label>
         <section class="menu-items">
           <div class="menu-items-logo">
             <img src="/assets/Group 6.svg" alt="Google Develope Group" />
@@ -21,17 +25,33 @@
                 routerLinkActive="home"
                 [routerLink]="['./']"
                 [routerLinkActiveOptions]="{ exact: true }"
+                (click)="hidMenu()"
                 >首頁</a
               >
             </li>
             <li>
-              <a routerLinkActive="home" [routerLink]="['./speaker']">講者</a>
+              <a
+                routerLinkActive="home"
+                [routerLink]="['./speaker']"
+                (click)="hidMenu()"
+                >講者</a
+              >
             </li>
             <li>
-              <a routerLinkActive="home" [routerLink]="['./agenda']">議程</a>
+              <a
+                routerLinkActive="home"
+                [routerLink]="['./agenda']"
+                (click)="hidMenu()"
+                >議程</a
+              >
             </li>
             <li>
-              <a routerLinkActive="home" [routerLink]="['./team']">團隊</a>
+              <a
+                routerLinkActive="home"
+                [routerLink]="['./team']"
+                (click)="hidMenu()"
+                >團隊</a
+              >
             </li>
           </ul>
         </section>

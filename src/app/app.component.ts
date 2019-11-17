@@ -14,7 +14,7 @@ import { isPlatformBrowser, DOCUMENT } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent {
   title = 'devfest2019';
   constructor(
     translate: TranslateService,
@@ -28,17 +28,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     translate.use(translate.getBrowserCultureLang());
     if (isPlatformBrowser(this.platformId)) {
       if (this.platform.ANDROID || this.platform.IOS) {
-        this.document.location.href = 'https://devfesttw.page.link/download';
+        // this.document.location.href = 'https://devfesttw.page.link/download';
       }
     }
-  }
-
-  ngOnInit() {}
-  ngAfterViewInit() {
-    // if (isPlatformBrowser(this.platformId)) {
-    //   if (this.platform.ANDROID || this.platform.IOS) {
-    //     this.document.location.href = 'https://devfesttw.page.link/download';
-    //   }
-    // }
   }
 }

@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  AfterViewInit
+} from '@angular/core';
 import { TitleCasePipe } from '@angular/common';
 import { DataService } from '../data.service';
 import { ActivatedRoute } from '@angular/router';
@@ -11,9 +17,10 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./layout.component.scss'],
   providers: [TitleCasePipe]
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent implements OnInit, AfterViewInit {
   data = {};
   bannerImage = '';
+  @ViewChild('menuControl') chkMenuControl: ElementRef;
   constructor(
     private route: ActivatedRoute,
     private dataService: DataService,
@@ -38,7 +45,12 @@ export class LayoutComponent implements OnInit {
         }
       });
   }
-
+  ngAfterViewInit() {
+    console.log(this.chkMenuControl.nativeElement);
+  }
+  hidMenu() {
+    this.chkMenuControl.nativeElement.checked = false;
+  }
   goTop() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
