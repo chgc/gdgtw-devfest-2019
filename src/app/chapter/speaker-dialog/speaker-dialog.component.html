@@ -1,24 +1,29 @@
-<section>
-  <header class="popovers-header">
-    <div class="button-group">
-      <button class="cross">
-        <img src="/assets/close-24px.svg" alt="關閉視窗" (click)="close()">
-      </button>
-    </div>
-    <figure>
-      <img [src]="speaker.speaker_image">
-    </figure>
-    <h3>{{ speaker.speaker_name }}</h3>
-  </header>
+<header class="popovers-header" mat-dialog-title>
+  <div class="button-group">
+    <button class="cross">
+      <img src="/assets/close-24px.svg" alt="關閉視窗" (click)="close()" />
+    </button>
+  </div>
+  <figure>
+    <img [src]="speaker.speaker_image" />
+  </figure>
+  <h3>{{ speaker.speaker_name }}</h3>
+</header>
+<mat-dialog-content>
   <main class="popovers-main">
     <div class="wrapper">
       <section class="popovers-info">
         <p>{{ speaker.speaker_desc }}</p>
       </section>
-      <section class="popovers-info">
-        <h3>議程</h3>
-        <p>{{ speaker.speaker_session }}</p>
+      <section class="popovers-schedule">
+        <h4>議程</h4>
+        <h3>{{ speaker.speaker_session }}</h3>
+        <p>{{ speaker.session_start_time }}</p>
+        <p>({{ speaker.track.title }})</p>
+        <span class="popovers-tag" *ngFor="let tag of speaker.tags">{{
+          tag
+        }}</span>
       </section>
     </div>
   </main>
-</section>
+</mat-dialog-content>

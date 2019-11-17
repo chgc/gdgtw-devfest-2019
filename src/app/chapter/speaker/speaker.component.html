@@ -1,12 +1,17 @@
 <header>
   <h2>講者</h2>
-  <p>從 Googler、合作夥伴以及社群講者們瞭解最新技術資訊，我們會在此不定期加入講者的相關資訊，<span>歡迎您在此持續關注我們的訊息。</span></p>
+  <p>
+    從
+    Googler、合作夥伴以及社群講者們瞭解最新技術資訊，我們會在此不定期加入講者的相關資訊，<span
+      >歡迎您在此持續關注我們的訊息。</span
+    >
+  </p>
 </header>
 <main>
   <div class="wrapper">
     <div class="card" *ngFor="let speaker of speakers" (click)="open(speaker)">
       <figure>
-        <img [src]="speaker.speaker_image">
+        <img [src]="speaker.speaker_image" />
       </figure>
       <div class="content">
         <h3>{{ speaker.speaker_name }}</h3>

@@ -17,7 +17,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./layout.component.scss'],
   providers: [TitleCasePipe]
 })
-export class LayoutComponent implements OnInit, AfterViewInit {
+export class LayoutComponent {
   data = {};
   bannerImage = '';
   @ViewChild('menuControl') chkMenuControl: ElementRef;
@@ -45,9 +45,6 @@ export class LayoutComponent implements OnInit, AfterViewInit {
         }
       });
   }
-  ngAfterViewInit() {
-    console.log(this.chkMenuControl.nativeElement);
-  }
   hidMenu() {
     this.chkMenuControl.nativeElement.checked = false;
   }
@@ -55,5 +52,4 @@ export class LayoutComponent implements OnInit, AfterViewInit {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
-  ngOnInit() {}
 }

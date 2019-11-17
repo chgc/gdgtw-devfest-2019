@@ -67,7 +67,7 @@ export interface Session {
 }
 
 export interface Track {
-  id: number;
+  id: string;
   title: string;
 }
 

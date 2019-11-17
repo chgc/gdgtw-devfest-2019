@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { pluck } from 'rxjs/operators';
 import { EventInfo, Session, Speaker } from '../data.model';
+import { SpeakerDialogComponent } from '../speaker-dialog/speaker-dialog.component';
 
 @Component({
   selector: 'gdg-agenda',
@@ -38,5 +39,11 @@ export class AgendaComponent implements OnInit {
     return this.speakers.filter(x => x.speaker_id === speakerId);
   }
 
+  open(speaker) {
+    this.dialog.open(SpeakerDialogComponent, {
+      width: '500px',
+      data: speaker
+    });
+  }
   ngOnInit() {}
 }
