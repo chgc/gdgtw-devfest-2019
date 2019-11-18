@@ -12,6 +12,12 @@ $font-weight-bold: 700;
 $design-mobile-screen-width: 414px;
 $design-pc-screen-width: 1920px;
 
+:host {
+  --default-primary-color: #673AB7;
+  --animation: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
 @function rem($font-size) {
   @return #{$font-size / $font-size-root}rem;
 }
@@ -385,6 +391,132 @@ $speaker-headshot-pc-width: 214px;
 
   .city::after {
     content: ',';
+  }
+}
+
+/* ----------------tickets ------------------*/
+.tickets-block {
+  a {
+    color: var(--default-primary-color);
+    text-decoration: none;
+    transition: border-color var(--animation);
+  }
+
+  .tickets-wrapper {
+    text-align: center;
+  }
+
+  .tickets-wrapper {
+    text-align: center;
+  }
+
+  .tickets {
+    margin: 32px 0 24px;
+  }
+
+  .ticket-item {
+    margin: 16px 8px;
+    width: 100%;
+    text-align: center;
+    background-color: #FFFFFF;
+  }
+
+  h1 {
+    padding: 8px 8px 24px 14px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+
+  .container,
+  .container-narrow {
+    margin: 0 auto;
+    padding: 24px 16px;
+    max-width: 1280px;
+  }
+
+
+  .header {
+    padding: 24px 0 0;
+    font-size: 16px;
+  }
+
+
+  .content {
+    padding: 0 24px;
+  }
+
+  .container-title {
+    margin-bottom: 24px;
+    padding: 0;
+    font-size: 32px;
+    line-height: 30px;
+  }
+
+  .card {
+    background-color: #fff;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.07), 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+    transition: box-shadow var(--animation);
+    cursor: pointer;
+  }
+
+
+  .price {
+    color: #673AB7;
+    font-size: 40px;
+  }
+
+  .ticket-price-wrapper {
+    margin: 24px 0;
+    white-space: nowrap;
+  }
+
+  .type-description {
+    font-size: 12px;
+    color: #757575;
+  }
+
+  .actions {
+    padding: 24px;
+    position: relative;
+  }
+
+  .paper-button {
+    padding: 0.7em;
+    border-radius: 2px;
+    font-size: 14px;
+    background-color: #673AB7;
+    color: #fff;
+  }
+
+
+
+  @media (min-width: 640px) {
+
+    .container,
+    .container-narrow {
+      padding: 32px;
+    }
+
+    .card:hover {
+      box-shadow: var(--box-shadow);
+    }
+
+  }
+
+  @media (min-width: 640px) {
+    .tickets-placeholder {
+      grid-template-columns: repeat(auto-fill, 200px);
+    }
+
+    .ticket-item {
+      max-width: 200px;
+    }
+
+    .ticket-item[in-demand] {
+      transform: scale(1.15);
+    }
+
   }
 }
 

@@ -18,7 +18,7 @@ import { Title } from '@angular/platform-browser';
   providers: [TitleCasePipe]
 })
 export class LayoutComponent {
-  data = {};
+  data;
   bannerImage = '';
   @ViewChild('menuControl') chkMenuControl: ElementRef;
   constructor(

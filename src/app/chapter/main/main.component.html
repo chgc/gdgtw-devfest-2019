@@ -57,6 +57,44 @@
       <img src="/assets/arrow-right.png" alt="" />
     </div>
   </section>
+  <section class="tickets-block">
+    <div class="tickets-wrapper container">
+      <h1 class="container-title">票務資訊</h1>
+      <div class="tickets">
+        <a
+          class="ticket-item card"
+          target="_blank"
+          rel="noopener noreferrer"
+          [href]="detail.links.registration"
+        >
+          <div class="header">
+            <h4>NTD</h4>
+          </div>
+          <div class="content" layout="" vertical="" flex-auto="">
+            <div class="ticket-price-wrapper">
+              <div class="price">$0</div>
+              <div class="discount"></div>
+            </div>
+            <div
+              class="type-description"
+              layout=""
+              vertical=""
+              flex-auto=""
+              center-justified=""
+            >
+              <div class="ticket-dates" hidden="">-</div>
+              <div class="ticket-info">Requires valid student/lecturer ID</div>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="paper-button">
+              報名
+            </button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
   <section class="place-wrapper">
     <iframe
       height="800"
