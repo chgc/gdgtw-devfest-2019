@@ -38,7 +38,7 @@
       </section>
     </div>
   </section>
-  <section class="wrapper speaker-wrapper">
+  <section class="wrapper speaker-wrapper" *ngIf="speakers.length>0">
     <h3>明星講者</h3>
     <div class="speaker-list">
       <section class="speaker" *ngFor="let speaker of speakers">

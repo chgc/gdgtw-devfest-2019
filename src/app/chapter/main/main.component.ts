@@ -45,7 +45,7 @@ export class ChapterMainComponent implements OnInit {
         };
 
         this.speakers = value.speakers.filter(x =>
-          this.detail.featureSpeakers.includes(x.speaker_id)
+          (this.detail.featureSpeakers || []).includes(x.speaker_id)
         );
 
         this.mapUrl = santizer.bypassSecurityTrustResourceUrl(
