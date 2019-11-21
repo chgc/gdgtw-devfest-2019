@@ -13,7 +13,7 @@
   <main class="popovers-main">
     <div class="wrapper">
       <section class="popovers-info">
-        <p>{{ speaker.speaker_desc }}</p>
+        <p [innerHtml]="speaker.speaker_desc | nltobr"></p>
       </section>
       <section class="popovers-schedule">
         <h4>議程</h4>

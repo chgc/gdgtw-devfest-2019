@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SpeakerDialogComponent } from './chapter/speaker-dialog/speaker-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { PlatformModule } from '@angular/cdk/platform';
+import { NltobrPipe } from './nltobr.pipe';
 
 const routes: Routes = [
   { path: 'cfp', component: CfpComponent },
@@ -50,7 +51,8 @@ const routes: Routes = [
     SponsorComponent,
     TeamComponent,
     MainComponent,
-    SpeakerDialogComponent
+    SpeakerDialogComponent,
+    NltobrPipe
   ],
   imports: [
     HttpClientModule,
