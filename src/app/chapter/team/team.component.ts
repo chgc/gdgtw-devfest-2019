@@ -10,16 +10,22 @@ import { EventInfo, Team } from '../data.model';
   styleUrls: ['./team.component.sass']
 })
 export class TeamComponent implements OnInit {
-  teams: { [key: string]: Team[] } = {};
+  teams: { key: string; members: Team[] }[] = [];
   constructor(private route: ActivatedRoute, private dialog: MatDialog) {
     const city = this.route.parent.snapshot.paramMap.get('city');
     this.route.parent.data.pipe(pluck<any, EventInfo>('data')).subscribe({
       next: value => {
         this.teams = value.teams.reduce((acc, cur) => {
-          const members = acc[cur.desc] || [];
-          members.push(cur);
-          return { ...acc, [cur.desc]: members };
-        }, {});
+          const group = acc.find(x => x.key === cur.desc) || {
+            key: cur.desc,
+            members: []
+          };
+          if (group.members.length === 0) {
+            acc.push(group);
+          }
+          group.members.push(cur);
+          return [...acc];
+        }, []);
         console.log(this.teams);
       }
     });
