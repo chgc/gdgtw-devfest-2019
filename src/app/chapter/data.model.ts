@@ -77,6 +77,7 @@ export interface Sponsor {
   desc: string;
   url: string;
   logo: string;
+  level?: string;
 }
 
 export interface Team {

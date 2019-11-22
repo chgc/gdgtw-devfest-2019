@@ -22,13 +22,16 @@ export class ChapterMainComponent implements OnInit {
     const city = this.route.parent.snapshot.paramMap.get('city');
     this.route.parent.data.pipe(pluck<any, EventInfo>('data')).subscribe({
       next: value => {
-        this.sponsors = value.sponsors.reduce((acc, s) => {
-          if (!acc[s.desc]) {
-            acc[s.desc] = [];
-          }
-          acc[s.desc].push(s);
-          return acc;
-        }, {});
+        this.sponsors = value.sponsors
+          .sort((a, b) => (+a.level - +b.level > 0 ? 1 : -1))
+          .reduce((acc, s) => {
+            console.log(s);
+            if (!acc[s.level]) {
+              acc[s.level] = [];
+            }
+            acc[s.level].push(s);
+            return acc;
+          }, {});
         this.detail = {
           ...value.event,
           location: {
@@ -38,7 +41,7 @@ export class ChapterMainComponent implements OnInit {
             )
           }
         };
-        // console.log(this.detail);
+        // console.log(this.sponsors);
         this.center = {
           lat: this.detail.location.lat,
           lng: this.detail.location.lng

@@ -61,12 +61,8 @@
     <div class="tickets-wrapper container">
       <h1 class="container-title">票務資訊</h1>
       <div class="tickets">
-        <a
-          class="ticket-item card"
-          target="_blank"
-          rel="noopener noreferrer"
-          [href]="detail.links.registration"
-        >
+        <a class="ticket-item card" target="_blank" rel="noopener noreferrer"
+           [href]="detail.links.registration">
           <div class="header">
             <h4>NTD</h4>
           </div>
@@ -75,13 +71,7 @@
               <div class="price">$0</div>
               <div class="discount"></div>
             </div>
-            <div
-              class="type-description"
-              layout=""
-              vertical=""
-              flex-auto=""
-              center-justified=""
-            >
+            <div class="type-description" layout="" vertical="" flex-auto="" center-justified="">
               <div class="ticket-dates" hidden="">-</div>
               <div class="ticket-info">Requires valid student/lecturer ID</div>
             </div>
@@ -96,14 +86,8 @@
     </div>
   </section>
   <section class="place-wrapper">
-    <iframe
-      height="800"
-      frameborder="0"
-      scrolling="no"
-      marginheight="0"
-      marginwidth="0"
-      [src]="mapUrl"
-    ></iframe>
+    <iframe height="800" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            [src]="mapUrl"></iframe>
     <div class="description">
       <h3>位置</h3>
       <p>{{ detail.location.mapTitle }}</p>
@@ -117,18 +101,17 @@
   </section>
   <section class="wrapper partner-wrapper" *ngIf="!isEmptyObject(sponsors)">
     <h3>合作夥伴</h3>
-    <section
-      class="partner-list-wrapper"
-      *ngFor="let level of sponsors | keyvalue"
-    >
-      <h4>{{ level.key }}</h4>
-      <section class="partner-list">
-        <div class="partner" *ngFor="let sponsor of level.value">
-          <a [href]="sponsor.url" target="_blank" rel="noopener">
-            <img [src]="sponsor.image" [alt]="sponsor.name" />
-          </a>
-        </div>
-      </section>
+    <section class="partner-list-wrapper" *ngFor="let level of sponsors | keyvalue">
+      <div *ngFor="let sponsor of level.value">
+        <h4>{{ sponsor.desc }}</h4>
+        <section class="partner-list">
+          <div class="partner partner-{{level.key}}">
+            <a [href]="sponsor.url" target="_blank" rel="noopener">
+              <img [src]="sponsor.image" [alt]="sponsor.name" />
+            </a>
+          </div>
+        </section>
+      </div>
     </section>
     <!-- <div class="link">
       <a href="##">成為贊助商</a>
