@@ -36,7 +36,9 @@ export class AgendaComponent implements OnInit {
   }
 
   getSpeaker(speakerId: string) {
-    return this.speakers.filter(x => x.speaker_id === speakerId);
+    return this.speakers.filter(x =>
+      (speakerId || '').split(',').includes(x.speaker_id)
+    );
   }
 
   open(speaker) {

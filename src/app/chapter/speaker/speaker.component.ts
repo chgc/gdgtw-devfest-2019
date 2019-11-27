@@ -26,8 +26,8 @@ export class SpeakerComponent implements OnInit {
   }
 
   open(speaker) {
-    const session = this.sessions.filter(
-      x => x.speaker_id === speaker.speaker_id
+    const session = this.sessions.filter(x =>
+      (x.speaker_id || '').split(',').includes(speaker.speaker_id)
     )[0];
     const track = this.tracks.filter(x => x.id === session.track_id)[0];
     this.dialog.open(SpeakerDialogComponent, {

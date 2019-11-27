@@ -578,6 +578,10 @@ main > section {
   .speaker-intro {
     width: 100%;
   }
+
+  .speaker-intro:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
 
 .speaker-intro > img {
