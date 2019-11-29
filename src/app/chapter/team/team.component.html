@@ -27,7 +27,7 @@
               target="_blank"
               rel="noopener"
               *ngIf="member.fb_url"
-              ><img src="/assets/facebook-f-brands.svg" alt=""
+              ><img src="/assets/facebook-brands.svg" alt=""
             /></a>
 
             <a
@@ -35,7 +35,23 @@
               target="_blank"
               rel="noopener"
               *ngIf="member.linkedin_url"
-              ><img src="/assets/linkedin-in-brands.svg" alt=""
+              ><img src="/assets/linkedin-brands.svg" alt=""
+            /></a>
+
+            <a
+              [href]="member.github_url"
+              target="_blank"
+              rel="noopener"
+              *ngIf="member.github_url"
+              ><img src="/assets/github-brands.svg" alt=""
+            /></a>
+
+            <a
+              [href]="member.twitter_url"
+              target="_blank"
+              rel="noopener"
+              *ngIf="member.twitter_url"
+              ><img src="/assets/twitter-brands.svg" alt=""
             /></a>
           </div>
         </div>
