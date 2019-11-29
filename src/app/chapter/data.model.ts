@@ -62,6 +62,9 @@ export interface Session {
   session_desc: string;
   speaker_id: string;
   track_id: string;
+  track_name?: string;
+  isHidden?: boolean;
+  isOnly?: boolean;
   tags: any[];
   links: Link;
 }

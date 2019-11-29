@@ -3,44 +3,43 @@
   <div class="wrapper">
     <h2>議程</h2>
     <div class="schedule-date">
-      <span class="month">{{ startDate | date: 'LLLL' }}</span
-      ><span class="day">{{ startDate | date: 'dd' }}</span>
+      <span class="month">{{ startDate | date: 'LLLL' }}</span><span
+            class="day">{{ startDate | date: 'dd' }}</span>
     </div>
   </div>
 </header>
-<main [ngStyle]="{ '--track-number': tracks.size }">
+<main [ngStyle]="{ '--track-number': tracks.length }">
   <section *ngFor="let section of sessionsByStartTime | keyvalue">
     <div class="schedule-time">
-      <span class="hour">{{ section.key | date: 'HH' }}</span
-      ><span class="minute">{{ section.key | date: 'mm' }}</span>
+      <span class="hour">{{ section.key | date: 'HH' }}</span><span
+            class="minute">{{ section.key | date: 'mm' }}</span>
     </div>
     <div class="lecture-container">
-      <div
-        class="lecture-content lecture-position"
-        *ngFor="let lecture of section.value"
-      >
-        <div class="lecture-title">
-          <h4>{{ lecture.session_title }}</h4>
-          <p [innerHtml]="lecture.session_desc | nltobr"></p>
-        </div>
-        <p class="length">{{ lecture.session_total_time }} min</p>
-        <div class="speaker">
-          <div
-            class="speaker-intro"
-            *ngFor="let speaker of getSpeaker(lecture.speaker_id)"
-          >
-            <img [src]="speaker.speaker_image" alt="Speaker's photo." />
-            <div>
-              <h4>{{ speaker.speaker_name }}</h4>
-            </div>
+      <ng-container *ngFor="let lecture of section.value">
+        <div class="lecture-content lecture-position"
+             [ngClass]="{'full-width': lecture.isOnly && !lecture.isHidden, 'isHidden':lecture.isHidden }"
+             *ngIf="!(lecture.isOnly && lecture.isHidden)">
+          <div class="lecture-title">
+            <h4>{{ lecture.session_title }}</h4>
+            <div class="tag-track">{{lecture.track_name }}</div>
+            <p [innerHtml]="(lecture.session_desc ||'') | nltobr"></p>
           </div>
-          <div class="speaker-tech">
-            <span class="tag-light" *ngFor="let tag of lecture.tags">{{
+          <p class="length">{{ lecture.session_total_time }} min</p>
+          <div class="speaker">
+            <div class="speaker-intro" *ngFor="let speaker of getSpeaker(lecture.speaker_id)">
+              <img [src]="speaker.speaker_image" alt="Speaker's photo." />
+              <div>
+                <h4>{{ speaker.speaker_name }}</h4>
+              </div>
+            </div>
+            <div class="speaker-tech">
+              <span class="tag-light" *ngFor="let tag of lecture.tags">{{
               tag
             }}</span>
+            </div>
           </div>
         </div>
-      </div>
+      </ng-container>
     </div>
   </section>
   <!-- <section>
