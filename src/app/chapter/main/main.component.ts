@@ -18,8 +18,11 @@ export class ChapterMainComponent implements OnInit {
   mapUrl;
   mapLink;
 
+  isTaipei = false;
+
   constructor(private route: ActivatedRoute, santizer: DomSanitizer) {
     const city = this.route.parent.snapshot.paramMap.get('city');
+    this.isTaipei = city.toLowerCase() === 'taipei';
     this.route.parent.data.pipe(pluck<any, EventInfo>('data')).subscribe({
       next: value => {
         this.sponsors = value.sponsors
